@@ -2,7 +2,7 @@
 
 Personal portfolio for Collin Burleigh, a Technical Support Engineer focused on SaaS, ecommerce, and automation systems.
 
-**Live site:** [portfoliov2-1.vercel.app](https://portfoliov2-1.vercel.app)
+**Live site:** [collinburleigh.com](https://collinburleigh.com)
 
 ![Collin Burleigh portfolio preview](Images/portfoliov2.1-img.png)
 
@@ -72,6 +72,6 @@ npm run build
 
 ## Contact
 
-- [Portfolio](https://portfoliov2-1.vercel.app)
+- [Portfolio](https://collinburleigh.com)
 - [LinkedIn](https://www.linkedin.com/in/burleighcollin)
 - [GitHub](https://github.com/CBurl1)
