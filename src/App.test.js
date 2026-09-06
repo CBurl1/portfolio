@@ -1,8 +1,18 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+jest.mock("./components/Particle", () => function MockParticle() {
+  return null;
+});
+
+jest.mock("./components/ScrollToTop", () => function MockScrollToTop() {
+  return null;
+});
+
+test("renders the portfolio introduction", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  expect(
+    screen.getByText(/Technical support · SaaS · automation/i)
+  ).toBeInTheDocument();
 });

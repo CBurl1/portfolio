@@ -16,7 +16,7 @@ function Projects() {
           eyebrow="01 · Selected Work"
           title="Applications I've"
           accent="shipped & supported"
-          subtitle="Production SaaS products, ecommerce tooling, and AI prototypes — each one I also support end-to-end."
+          subtitle="SaaS products, ecommerce tooling, and AI prototypes — built and supported end-to-end."
         />
 
         <div className="metric-strip">
@@ -27,7 +27,7 @@ function Projects() {
           <div className="metric-strip__divider" aria-hidden="true" />
           <div className="metric-strip__item">
             <span className="metric-strip__value">2</span>
-            <span className="metric-strip__label">SaaS products live</span>
+            <span className="metric-strip__label">SaaS products shipped</span>
           </div>
           <div className="metric-strip__divider" aria-hidden="true" />
           <div className="metric-strip__item">
@@ -46,11 +46,11 @@ function Projects() {
               imgPath={autosort}
               isBlog={false}
               title="AutoSortPro – AI-Based File Organization"
-              description="AI-based file organization app that organizes, tags, and summarizes files. I provide direct support to users while improving product workflows and shipping fixes for reported issues."
+              description="AI-based file organization app that organizes, tags, and summarizes files. I supported users directly while improving product workflows and shipping fixes for reported issues."
               tags={["Electron", "FastAPI", "React", "PostgreSQL", "Auth0", "Stripe", "OpenAI", "AWS"]}
               showGitHub={false}
               demoLink="https://autosortpro.com"
-              buttonText="Live"
+              buttonText="Case Study"
               videoDemo="https://www.youtube.com/watch?v=VLEiTljMmFk"
             />
           </Col>
