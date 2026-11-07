@@ -1,68 +1,22 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
-import {
-  SiGit,
-  SiJira,
-  SiPostman,
-  SiPytest,
-  SiJest,
-  SiElectron,
-  SiMagento,
-  SiAuth0,
-  SiStripe,
-  SiOpenai,
-  SiAmazonaws,
-} from "react-icons/si";
+import { SiGit, SiJira, SiPostman, SiPytest, SiJest, SiElectron, SiMagento, SiAuth0, SiStripe, SiOpenai, SiAmazonaws } from "react-icons/si";
+
+const tools = [
+  { name: "Git", Icon: SiGit },
+  { name: "Jira", Icon: SiJira },
+  { name: "Postman", Icon: SiPostman },
+  { name: "PyTest", Icon: SiPytest },
+  { name: "Jest", Icon: SiJest },
+  { name: "Electron", Icon: SiElectron },
+  { name: "Magento 2", Icon: SiMagento },
+  { name: "Auth0", Icon: SiAuth0 },
+  { name: "Stripe", Icon: SiStripe },
+  { name: "OpenAI", Icon: SiOpenai },
+  { name: "AWS", Icon: SiAmazonaws },
+];
 
 function Toolstack() {
-  return (
-    <Row style={{ justifyContent: "center", paddingBottom: "30px" }}>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiGit />
-        <p style={{ fontSize: 'small' }}>Git</p>
-      </Col>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiJira />
-        <p style={{ fontSize: 'small' }}>Jira</p>
-      </Col>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiPostman />
-        <p style={{ fontSize: 'small' }}>Postman</p>
-      </Col>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiPytest />
-        <p style={{ fontSize: 'small' }}>PyTest</p>
-      </Col>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiJest />
-        <p style={{ fontSize: 'small' }}>Jest</p>
-      </Col>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiElectron />
-        <p style={{ fontSize: 'small' }}>Electron</p>
-      </Col>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiMagento />
-        <p style={{ fontSize: 'small' }}>Magento 2</p>
-      </Col>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiAuth0 />
-        <p style={{ fontSize: 'small' }}>Auth0</p>
-      </Col>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiStripe />
-        <p style={{ fontSize: 'small' }}>Stripe</p>
-      </Col>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiOpenai />
-        <p style={{ fontSize: 'small' }}>OpenAI</p>
-      </Col>
-      <Col xs={6} sm={4} lg={3} xl={2} className="tech-icons text-center">
-        <SiAmazonaws />
-        <p style={{ fontSize: 'small' }}>AWS</p>
-      </Col>
-    </Row>
-  );
+  return <div className="skill-list">{tools.map(({ name, Icon }) => <div className="skill-item" key={name}><Icon aria-hidden="true" /><span>{name}</span></div>)}</div>;
 }
 
 export default Toolstack;
