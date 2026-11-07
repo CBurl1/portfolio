@@ -5,7 +5,6 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import Particle from "../Particle";
 import PageHeader from "../PageHeader";
 import pdf from "../../Assets/Collin_Burleigh_Software_Engineer_Resume.pdf";
 
@@ -13,10 +12,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 const highlights = [
   "Software Engineer",
-  "React · Python · FastAPI",
-  "PostgreSQL · Electron",
+  "Python · FastAPI · Flask",
+  "React · PostgreSQL",
+  "Electron · Magento 2 API",
   "Auth0 · Stripe · OpenAI · AWS",
-  "Magento 2 API",
 ];
 
 function ResumeNew() {
@@ -33,7 +32,6 @@ function ResumeNew() {
 
   return (
     <Container fluid className="resume-section">
-      <Particle />
       <Container>
         <PageHeader
           eyebrow="Résumé"

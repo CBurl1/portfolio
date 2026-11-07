@@ -6,7 +6,6 @@ import {
   AiOutlineArrowRight,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
-import Particle from "../Particle";
 import HeroVisual from "./HeroVisual";
 import Home2 from "./Home2";
 
@@ -14,7 +13,6 @@ function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
-        <Particle />
         <Container className="home-content">
           <Row className="align-items-center">
             <Col md={7} className="home-header">
@@ -27,9 +25,9 @@ function Home() {
               </h1>
 
               <p className="hero-summary">
-                Full-stack applications in React, Python, and PostgreSQL. I built
-                AutoSortPro and M2 InstaCount, connecting product workflows with
-                APIs, data, and the people who use them.
+                I build full-stack applications with Python, Flask and FastAPI,
+                React, and PostgreSQL. AutoSortPro and M2 InstaCount connect
+                product workflows with APIs, data, and the people who use them.
               </p>
 
               <div className="home-cta-row">

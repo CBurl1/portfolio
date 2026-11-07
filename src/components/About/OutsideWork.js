@@ -5,18 +5,18 @@ import { TbWorld } from "react-icons/tb";
 const items = [
   {
     icon: <TbWorld />,
-    title: "Global exploration",
-    body: "20+ countries visited — broadens perspective and sharpens how I approach new systems and people.",
+    title: "Travel and Spanish",
+    body: "I like visiting new places and am learning to speak Spanish.",
   },
   {
     icon: <GiMountainClimbing />,
-    title: "Skiing",
-    body: "A newfound love that keeps me connected to nature and comfortable with challenge.",
+    title: "Time outdoors",
+    body: "I enjoy skiing, fishing, and hiking when I can.",
   },
   {
     icon: <GiBaseballBat />,
-    title: "Coaching",
-    body: "Coaching youth baseball — giving back and sharing lessons learned from my own experiences.",
+    title: "Youth baseball",
+    body: "I enjoy coaching youth baseball and spending time with the team.",
   },
 ];
 

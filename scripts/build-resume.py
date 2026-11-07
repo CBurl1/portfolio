@@ -122,7 +122,7 @@ def main():
 
     story = [
         Paragraph("Collin Burleigh", NAME),
-        Paragraph("SOFTWARE ENGINEER  |  FULL-STACK APPLICATIONS", HEADLINE),
+        Paragraph("SOFTWARE ENGINEER  |  PYTHON &amp; FULL-STACK APPLICATIONS", HEADLINE),
         Spacer(1, 3),
         Paragraph(
             "New Hampshire, USA  |  603-617-9989  |  "
@@ -137,8 +137,8 @@ def main():
     story.append(
         Paragraph(
             "Software developer who has built and supported full-stack applications for SaaS and "
-            "ecommerce workflows. Shipped AutoSortPro and M2 InstaCount using React, Python, "
-            "Flask/FastAPI, and PostgreSQL. Work with users after launch to investigate issues "
+            "ecommerce workflows. Shipped AutoSortPro and M2 InstaCount using Python, "
+            "Flask/FastAPI, React, and PostgreSQL. Work with users after launch to investigate issues "
             "and improve the product.",
             BODY,
         )
@@ -169,7 +169,7 @@ def main():
     story.append(
         entry(
             "AutoSortPro",
-            "Electron, React, FastAPI, PostgreSQL, Auth0, Stripe, OpenAI, AWS",
+            "Python, FastAPI, Electron, React, PostgreSQL, Auth0, Stripe, OpenAI, AWS",
             [
                 "Built an AI-powered file organization application that organizes, tags, and summarizes files.",
                 "Reached 132 active users and organized 12.5K+ files; implemented authentication, payments, AI features, and file processing.",
@@ -208,7 +208,7 @@ def main():
     )
     story.append(
         entry(
-            "Technical Systems Engineer, Ecommerce Operations  |  Family Magento business  |  2022 - Present",
+            "Technical Systems Engineer, Ecommerce Operations  |  2022 - Present",
             "",
             [
                 "Built M2 InstaCount around inventory and receiving workflows in a business processing 75+ daily orders.",

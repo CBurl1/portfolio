@@ -1,21 +1,17 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
 import PageHeader from "../PageHeader";
-import m2 from "../../Assets/Projects/m2-instacount.png";
-import autosort from "../../Assets/Projects/AutoSortPro.png";
 
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <PageHeader
           eyebrow="01 · Selected Work"
-          title="Applications I've"
-          accent="built in the real world"
-          subtitle="Full-stack applications, ecommerce tooling, and a Python prototype. Each project began with a concrete workflow to solve."
+          title="Selected software"
+          accent="projects"
+          subtitle="Python applications for file organization, inventory operations, and a smart-home prototype."
         />
 
         <div className="metric-strip">
@@ -26,7 +22,7 @@ function Projects() {
           <div className="metric-strip__divider" aria-hidden="true" />
           <div className="metric-strip__item">
             <span className="metric-strip__value">132</span>
-            <span className="metric-strip__label">Active AutoSortPro user libraries</span>
+            <span className="metric-strip__label">Active AutoSortPro users</span>
           </div>
           <div className="metric-strip__divider" aria-hidden="true" />
           <div className="metric-strip__item">
@@ -46,12 +42,13 @@ function Projects() {
             style={{ display: "flex", alignItems: "stretch" }}
           >
             <ProjectCard
-              imgPath={autosort}
-              imageAlt="AutoSortPro file organization app preview"
+              visualKind="files"
+              visualLabel="AutoSortPro"
+              visualSubtitle="Python · file intelligence"
               category="Desktop and web application"
               title="AutoSortPro"
               description="Built an AI-powered file organizer with searchable, editable titles, summaries, and tags; OCR, batch processing, and portable exports. Its public case study reports 12.5K+ files organized by 132 active users. The service has since shut down."
-              tags={["Electron", "FastAPI", "React", "PostgreSQL", "Auth0", "Stripe", "OpenAI", "AWS"]}
+              tags={["Python", "FastAPI", "Electron", "React", "PostgreSQL", "Auth0", "Stripe", "OpenAI", "AWS"]}
               demoLink="https://autosortpro.com/#impact"
               buttonText="View case study"
               videoDemo="https://www.youtube.com/watch?v=VLEiTljMmFk"
@@ -64,8 +61,9 @@ function Projects() {
             style={{ display: "flex", alignItems: "stretch" }}
           >
             <ProjectCard
-              imgPath={m2}
-              imageAlt="M2 InstaCount inventory tool preview"
+              visualKind="inventory"
+              visualLabel="M2 InstaCount"
+              visualSubtitle="Python · barcode workflows"
               category="Full-stack ecommerce tool"
               title="M2 InstaCount"
               description="Built a Magento 2 tool for scanner-based product lookup, discrepancy flags, receiving with CSV export, and Veeqo batch picking. In one operation, a roughly 4,500-SKU year-end count took 22 hours, down from 42; four timed picks averaged 22% less time."
@@ -85,6 +83,8 @@ function Projects() {
           >
             <ProjectCard
               visualLabel="OpenHome"
+              visualKind="home"
+              visualSubtitle="Python · AI prototype"
               category="Python prototype"
               title="OpenHome"
               description="Developed a Python application for an AI-powered smart-home OS prototype. The grant-funded work was presented to more than 100 potential investors in 2024."

@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
 import PageHeader from "../PageHeader";
 import Github from "./Github";
 import Techstack from "./Techstack";
@@ -12,7 +11,6 @@ import OutsideWork from "./OutsideWork";
 function About() {
   return (
     <Container fluid className="about-section">
-      <Particle />
       <Container>
         <PageHeader
           eyebrow="About · Collin Burleigh"
@@ -86,7 +84,7 @@ function About() {
             <span className="section-eyebrow">04 · Outside of work</span>
           </div>
           <h2 className="project-heading" style={{ textAlign: "center" }}>
-            Things I <strong className="purple">care about</strong>
+            A few things I <strong className="purple">enjoy</strong>
           </h2>
           <Row style={{ justifyContent: "center" }}>
             <Col lg={10} md={11} sm={12}>
