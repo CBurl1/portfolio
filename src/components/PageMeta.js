@@ -5,12 +5,12 @@ const pages = {
   "/": {
     title: "Collin Burleigh | Software Engineer",
     description:
-      "Software engineer building full-stack applications with React, Python, FastAPI, and PostgreSQL. Explore AutoSortPro, M2 InstaCount, and OpenHome.",
+      "Software engineer building full-stack applications with Python, Flask, FastAPI, React, and PostgreSQL. Explore AutoSortPro, M2 InstaCount, and OpenHome.",
   },
   "/about": {
     title: "About | Collin Burleigh",
     description:
-      "Learn about Collin Burleigh's software development experience across SaaS, ecommerce, React, Python, and PostgreSQL.",
+      "Learn about Collin Burleigh's software development experience across Python, SaaS, ecommerce, React, and PostgreSQL.",
   },
   "/project": {
     title: "Projects | Collin Burleigh",

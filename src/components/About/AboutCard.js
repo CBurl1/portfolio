@@ -18,7 +18,7 @@ function AboutCard() {
       </p>
       <p>
         Alongside my freelance work, I'm a{" "}
-        <span className="purple">Technical Systems Engineer</span> for a family Magento ecommerce
+        <span className="purple">Technical Systems Engineer</span> for a Magento ecommerce
         business processing <span className="purple">75+ daily orders</span>.
         I built M2 InstaCount around its inventory and receiving workflows,
         and I continue to work with the operational problems the software is

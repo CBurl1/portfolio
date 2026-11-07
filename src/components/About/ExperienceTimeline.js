@@ -15,7 +15,7 @@ const experiences = [
   },
   {
     role: "Technical Systems Engineer · Ecommerce Operations",
-    org: "Family Magento Business",
+    org: "Magento ecommerce business",
     period: "2022 – Present",
     stack: ["Magento 2", "Python", "Flask", "React", "PostgreSQL"],
     bullets: [

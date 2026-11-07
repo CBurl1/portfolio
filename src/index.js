@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-/* Brave reports background-clip:text as supported but often paints flat gray — use CSS fallback */
+/* Brave reports background-clip:text as supported but often paints flat gray. Use CSS fallback. */
 if (typeof navigator !== "undefined" && navigator.brave && typeof navigator.brave.isBrave === "function") {
   navigator.brave.isBrave().then((isBrave) => {
     if (isBrave) document.documentElement.classList.add("brave-text-fallback");

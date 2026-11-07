@@ -23,8 +23,8 @@ function Home2() {
               fixes needed after launch.
               <br />
               <br />
-              I work across <span className="purple">React, JavaScript, Python,
-              Flask, FastAPI, PostgreSQL, and Electron</span>, with integrations
+              I work across <span className="purple">Python, Flask, FastAPI,
+              React, JavaScript, PostgreSQL, and Electron</span>, with integrations
               including Auth0, Stripe, OpenAI, Magento 2, and AWS.
               <br />
               <br />

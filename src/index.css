@@ -18,27 +18,25 @@
   --accent-500: #0ea5e9;
 
   /* Surfaces */
-  --bg-0: #0a0616;
-  --bg-1: #0e0a1f;
-  --bg-2: #151030;
-  --bg-card: rgba(255, 255, 255, 0.04);
-  --bg-card-hover: rgba(255, 255, 255, 0.07);
-  --border-card: rgba(183, 148, 244, 0.18);
-  --border-card-strong: rgba(183, 148, 244, 0.35);
+  --bg-0: #0b1020;
+  --bg-1: #101729;
+  --bg-2: #151d32;
+  --bg-card: #141d30;
+  --bg-card-hover: #19243a;
+  --border-card: rgba(169, 186, 220, 0.17);
+  --border-card-strong: rgba(196, 181, 253, 0.42);
 
   /* Text */
-  --text-primary: #f5f3ff;
-  --text-secondary: #d8d2e8;
-  --text-muted: #a79dbf;
+  --text-primary: #f5f7fc;
+  --text-secondary: #d0d8e8;
+  --text-muted: #a5b2ca;
 
   /* Effects */
-  --gradient-primary: linear-gradient(135deg, #c084fc 0%, #a855f7 45%, #7c3aed 100%);
+  --gradient-primary: linear-gradient(135deg, #b692f8 0%, #9566e9 100%);
   --gradient-accent: linear-gradient(135deg, #c084fc 0%, #38bdf8 100%);
-  --shadow-card: 0 10px 30px -10px rgba(124, 58, 237, 0.35),
-                 0 2px 10px -2px rgba(0, 0, 0, 0.4);
-  --shadow-card-hover: 0 25px 50px -15px rgba(168, 85, 247, 0.45),
-                      0 8px 20px -4px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 40px rgba(168, 85, 247, 0.35);
+  --shadow-card: 0 14px 36px rgba(0, 0, 0, 0.16);
+  --shadow-card-hover: 0 18px 42px rgba(0, 0, 0, 0.23);
+  --shadow-glow: 0 0 24px rgba(168, 85, 247, 0.14);
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -67,8 +65,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
   background-color: var(--bg-0);
-  background-image:
-    linear-gradient(180deg, #0a0616 0%, #0c0820 50%, #0a0618 100%);
+  background-image: linear-gradient(180deg, #0b1020 0%, #0e1425 55%, #0b1020 100%);
   background-repeat: no-repeat;
   min-height: 100vh;
   overflow-x: hidden;
@@ -91,7 +88,7 @@ button {
   color-scheme: dark;
 }
 
-/* Animated aurora — layered blobs drifting behind content */
+/* Restrained ambient light behind the page */
 body::before,
 body::after {
   content: "";
@@ -101,24 +98,10 @@ body::after {
   pointer-events: none;
 }
 body::before {
-  background:
-    radial-gradient(520px 420px at 15% 20%, rgba(139, 92, 246, 0.38), transparent 65%),
-    radial-gradient(560px 480px at 85% 10%, rgba(56, 189, 248, 0.22), transparent 65%),
-    radial-gradient(620px 520px at 50% 110%, rgba(168, 85, 247, 0.35), transparent 65%);
-  filter: blur(30px);
-  animation: auroraDrift 22s ease-in-out infinite alternate;
+  background: radial-gradient(700px 540px at 6% 4%, rgba(126, 88, 205, 0.13), transparent 72%);
 }
 body::after {
-  background:
-    radial-gradient(420px 340px at 75% 45%, rgba(192, 132, 252, 0.28), transparent 60%),
-    radial-gradient(380px 300px at 20% 75%, rgba(14, 165, 233, 0.22), transparent 60%);
-  filter: blur(40px);
-  animation: auroraDrift 30s ease-in-out infinite alternate-reverse;
-}
-@keyframes auroraDrift {
-  0%   { transform: translate3d(0, 0, 0) scale(1); }
-  50%  { transform: translate3d(2%, -2%, 0) scale(1.06); }
-  100% { transform: translate3d(-2%, 2%, 0) scale(1.03); }
+  background: radial-gradient(650px 520px at 97% 32%, rgba(38, 90, 155, 0.11), transparent 70%);
 }
 
 /* Subtle grain overlay for depth */
@@ -177,7 +160,7 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-/* Brave: @supports passes but rendering is gray — class set in index.js (navigator.brave.isBrave) */
+/* Brave: @supports passes but rendering is gray. Class set in index.js (navigator.brave.isBrave). */
 html.brave-text-fallback .gradient-text,
 html.brave-text-fallback .main-name,
 html.brave-text-fallback .Typewriter__wrapper {

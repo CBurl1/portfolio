@@ -4,29 +4,25 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsPlayCircle } from "react-icons/bs";
 import { AiOutlineHome } from "react-icons/ai";
+import { FiFolder, FiPackage } from "react-icons/fi";
+
+const visualIcons = {
+  files: FiFolder,
+  inventory: FiPackage,
+  home: AiOutlineHome,
+};
 
 function ProjectCards(props) {
+  const VisualIcon = visualIcons[props.visualKind] || AiOutlineHome;
+
   return (
     <Card className="project-card-view" style={{ width: "100%" }}>
       <div className="project-card-imagewrap">
-        {props.imgPath ? (
-          <Card.Img
-            variant="top"
-            src={props.imgPath}
-            alt={props.imageAlt || props.title}
-            style={{
-              height: "210px",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-        ) : (
-          <div className="project-card-visual" aria-hidden="true">
-            <AiOutlineHome />
-            <span>{props.visualLabel}</span>
-            <small>Python · AI prototype</small>
-          </div>
-        )}
+        <div className={`project-card-visual project-card-visual--${props.visualKind || "home"}`} aria-hidden="true">
+          <VisualIcon />
+          <span>{props.visualLabel || props.title}</span>
+          <small>{props.visualSubtitle}</small>
+        </div>
         <span className="project-card-image-shade" aria-hidden="true" />
       </div>
 
@@ -82,7 +78,7 @@ function ProjectCards(props) {
           )}
 
           {props.videoDemo && (
-            <Button variant="primary" href={props.videoDemo} target="_blank" rel="noopener noreferrer">
+            <Button variant="outline-primary" className="btn-ghost" href={props.videoDemo} target="_blank" rel="noopener noreferrer">
               <BsPlayCircle /> &nbsp;Demo Video
             </Button>
           )}
