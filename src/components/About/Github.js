@@ -8,7 +8,7 @@ function Github() {
         username="cburl1"
         blockSize={14}
         blockMargin={5}
-        color="#c084f5"
+        color="#2458b8"
         fontSize={14}
       />
     </div>

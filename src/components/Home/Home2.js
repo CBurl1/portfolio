@@ -15,22 +15,24 @@ function Home2() {
             <h2 className="home-about-heading">
               Engineering <span className="purple">in practice</span>
             </h2>
-            <p className="home-about-body">
+            <div className="home-about-body">
+            <p>
               I build software for real workflows, from an{" "}
               <span className="purple">AI-powered file organizer</span> to a{" "}
               <span className="purple">Magento 2 inventory tool</span>. My work
               spans product design, application code, integrations, and the
               fixes needed after launch.
-              <br />
-              <br />
+            </p>
+            <p>
               I work across <span className="purple">Python, Flask, FastAPI,
               React, JavaScript, PostgreSQL, and Electron</span>, with integrations
               including Auth0, Stripe, OpenAI, Magento 2, and AWS.
-              <br />
-              <br />
+            </p>
+            <p>
               Building for users has kept me close to the product after release.
               AutoSortPro's <a href="https://autosortpro.com/#impact" target="_blank" rel="noopener noreferrer">public case study</a> records <span className="purple">132 active users</span> and more than <span className="purple">12,500 files organized</span>. I've investigated issues and shipped fixes informed by user feedback.
             </p>
+            </div>
           </Col>
           <Col md={4} className="myAvtar">
             <AboutVisual />

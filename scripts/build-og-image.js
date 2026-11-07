@@ -10,7 +10,7 @@ const outPath = path.resolve(__dirname, "..", "public", "og-image.png");
 const svg = fs.readFileSync(svgPath);
 
 const resvg = new Resvg(svg, {
-  background: "#0a0616",
+  background: "#f6f8f7",
   fitTo: { mode: "width", value: 1200 },
   font: {
     loadSystemFonts: true,

@@ -1,103 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#0a0616"/>
-      <stop offset="100%" stop-color="#140a2e"/>
-    </linearGradient>
-
-    <radialGradient id="blob1" cx="18%" cy="25%" r="60%">
-      <stop offset="0%"   stop-color="#a855f7" stop-opacity="0.55"/>
-      <stop offset="55%"  stop-color="#7c3aed" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
-
-    <radialGradient id="blob2" cx="85%" cy="20%" r="55%">
-      <stop offset="0%"   stop-color="#38bdf8" stop-opacity="0.38"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
-
-    <radialGradient id="blob3" cx="55%" cy="110%" r="65%">
-      <stop offset="0%"   stop-color="#c084fc" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-    </radialGradient>
-
-    <linearGradient id="title" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#e9d5ff"/>
-    </linearGradient>
-
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#c084fc"/>
-      <stop offset="100%" stop-color="#38bdf8"/>
-    </linearGradient>
-
-    <linearGradient id="cb-mark" x1="8%" y1="0%" x2="92%" y2="100%">
-      <stop offset="0%"   stop-color="#c084fc"/>
-      <stop offset="55%"  stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#6d28d9"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#blob1)"/>
-  <rect width="1200" height="630" fill="url(#blob2)"/>
-  <rect width="1200" height="630" fill="url(#blob3)"/>
-
-  <rect x="12" y="12" width="1176" height="606" rx="28" ry="28"
-        fill="none" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1"/>
-
-  <g transform="translate(80, 72)">
-    <rect width="112" height="112" rx="24" ry="24" fill="url(#cb-mark)"/>
-    <rect x="0.5" y="0.5" width="111" height="111" rx="23.5" ry="23.5"
-          fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-    <text x="56" y="79" text-anchor="middle"
-          font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-          font-size="58" font-weight="900" fill="#ffffff" letter-spacing="-2">CB</text>
-  </g>
-
-  <text x="220" y="120"
-        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="22" font-weight="700" fill="#a79dbf" letter-spacing="6">
-    COLLINBURLEIGH.COM
-  </text>
-  <text x="220" y="165"
-        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="28" font-weight="600" fill="#d8d2e8" letter-spacing="-0.3">
-    Portfolio &#183; Seacoast, New Hampshire
-  </text>
-
-  <text x="80" y="345"
-        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="128" font-weight="800" fill="url(#title)" letter-spacing="-4">
-    Collin Burleigh
-  </text>
-
-  <text x="80" y="430"
-        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="56" font-weight="700" fill="url(#accent)" letter-spacing="-1.5">
-    Software Engineer
-  </text>
-
-  <text x="80" y="485"
-        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-size="28" font-weight="500" fill="#d8d2e8" letter-spacing="-0.2">
-    Python and full-stack applications &#183; FastAPI &#183; React &#183; PostgreSQL
-  </text>
-
-  <g transform="translate(80, 530)" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-     font-size="22" font-weight="600" fill="#f5f3ff">
-    <g transform="translate(0, 0)">
-      <rect width="180" height="44" rx="22" ry="22" fill="rgba(255,255,255,0.06)" stroke="#a855f7" stroke-opacity="0.45"/>
-      <text x="90" y="29" text-anchor="middle">Python + React</text>
-    </g>
-    <g transform="translate(200, 0)">
-      <rect width="230" height="44" rx="22" ry="22" fill="rgba(255,255,255,0.06)" stroke="#a855f7" stroke-opacity="0.45"/>
-      <text x="115" y="29" text-anchor="middle">2 applications built</text>
-    </g>
-    <g transform="translate(450, 0)">
-      <rect width="320" height="44" rx="22" ry="22" fill="rgba(255,255,255,0.06)" stroke="#38bdf8" stroke-opacity="0.55"/>
-      <text x="160" y="29" text-anchor="middle">M2 InstaCount &#183; AutoSortPro</text>
-    </g>
-  </g>
+  <rect width="1200" height="630" fill="#f6f8f7"/>
+  <path d="M0 0H1200V630H0Z" fill="#f5f8f8"/>
+  <path d="M730 0H1200V630H990L730 0Z" fill="#e8f0fc"/>
+  <path d="M1010 0H1200V630H1130L870 0Z" fill="#dce9f8" opacity=".55"/>
+  <path d="M0 0H1200" stroke="#dce4e4"/>
+  <rect x="67" y="62" width="65" height="65" rx="13" fill="#2458b8"/>
+  <text x="99" y="105" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#ffffff" letter-spacing="-2">CB.</text>
+  <text x="157" y="89" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#2458b8" letter-spacing="3">COLLINBURLEIGH.COM</text>
+  <text x="157" y="116" font-family="Helvetica,Arial,sans-serif" font-size="18" fill="#657582">Software engineering portfolio</text>
+  <rect x="67" y="196" width="46" height="4" fill="#2458b8"/>
+  <text x="67" y="301" font-family="Helvetica,Arial,sans-serif" font-size="75" font-weight="700" fill="#142331" letter-spacing="-3">Collin Burleigh</text>
+  <text x="67" y="383" font-family="Helvetica,Arial,sans-serif" font-size="63" font-weight="700" fill="#2458b8" letter-spacing="-2">Software Engineer</text>
+  <text x="67" y="444" font-family="Helvetica,Arial,sans-serif" font-size="26" fill="#526372">Python · FastAPI · Flask · React · PostgreSQL</text>
+  <path d="M67 504H1133" stroke="#dce4e4" stroke-width="2"/>
+  <text x="67" y="548" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="700" fill="#142331">AUTOSORTPRO</text>
+  <text x="346" y="548" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="700" fill="#142331">M2 INSTACOUNT</text>
+  <text x="676" y="548" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="700" fill="#142331">OPENHOME</text>
+  <text x="67" y="584" font-family="Helvetica,Arial,sans-serif" font-size="17" fill="#6d7d88">Selected builds / 01–03</text>
 </svg>
