@@ -1,35 +1,18 @@
 import React from "react";
 
+const layers = [
+  { number: "01", title: "Python services", detail: "Flask · FastAPI" },
+  { number: "02", title: "Product interfaces", detail: "React · Electron" },
+  { number: "03", title: "Data and APIs", detail: "PostgreSQL · Magento 2" },
+];
+
 function AboutVisual() {
-  const orbitTags = [
-    { label: "Python", angle: 0 },
-    { label: "React", angle: 60 },
-    { label: "Flask", angle: 120 },
-    { label: "PostgreSQL", angle: 180 },
-    { label: "AWS", angle: 240 },
-    { label: "Magento 2", angle: 300 },
-  ];
-
   return (
-    <div className="about-visual" aria-hidden="true">
-      <div className="about-visual__ring about-visual__ring--outer" />
-      <div className="about-visual__ring about-visual__ring--mid" />
-
-      <div className="about-visual__orb">
-        <span className="about-visual__mono">CB</span>
-        <div className="about-visual__orb-glow" />
-      </div>
-
-      <div className="about-visual__orbit">
-        {orbitTags.map((t) => (
-          <span
-            key={t.label}
-            className="about-visual__tag"
-            style={{ "--angle": `${t.angle}deg` }}
-          >
-            {t.label}
-          </span>
-        ))}
+    <div className="about-visual">
+      <span className="section-eyebrow">HOW I BUILD</span>
+      <h3>From the workflow to the working product.</h3>
+      <div className="about-visual__layers">
+        {layers.map((layer) => <div className="about-visual__layer" key={layer.number}><span>{layer.number}</span><div><strong>{layer.title}</strong><small>{layer.detail}</small></div></div>)}
       </div>
     </div>
   );

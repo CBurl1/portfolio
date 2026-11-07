@@ -13,9 +13,9 @@ import {
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import PageMeta from "./components/PageMeta";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
