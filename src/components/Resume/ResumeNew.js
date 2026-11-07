@@ -28,7 +28,7 @@ function ResumeNew() {
     return () => window.removeEventListener("resize", update);
   }, []);
 
-  const pageScale = width > 1100 ? 1.6 : width > 786 ? 1.3 : 0.55;
+  const pageScale = width > 1100 ? 1.6 : width > 786 ? 1.3 : Math.min(1, (width - 72) / 612);
 
   return (
     <Container fluid className="resume-section">
@@ -74,6 +74,7 @@ function ResumeNew() {
           </Button>
         </Row>
 
+        <p className="resume-preview-label">One-page preview</p>
         <Row className="resume">
           <div className="resume-frame">
             <Document file={pdf} className="d-flex justify-content-center">
@@ -82,17 +83,6 @@ function ResumeNew() {
           </div>
         </Row>
 
-        <Row style={{ justifyContent: "center" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            download="Collin_Burleigh_Software_Engineer_Resume.pdf"
-            style={{ maxWidth: "220px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download PDF
-          </Button>
-        </Row>
       </Container>
     </Container>
   );
