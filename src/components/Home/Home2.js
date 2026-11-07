@@ -28,10 +28,8 @@ function Home2() {
               including Auth0, Stripe, OpenAI, Magento 2, and AWS.
               <br />
               <br />
-              Building for users has kept me close to the product after release:
-              I've supported roughly <span className="purple">140 users</span>{" "}
-              across my applications, investigated issues, and shipped fixes
-              informed by their feedback.
+              Building for users has kept me close to the product after release.
+              AutoSortPro's <a href="https://autosortpro.com/#impact" target="_blank" rel="noopener noreferrer">public case study</a> records <span className="purple">132 active users</span> and more than <span className="purple">12,500 files organized</span>. I've investigated issues and shipped fixes informed by user feedback.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -43,14 +41,15 @@ function Home2() {
           <Col md={12}>
             <div className="stats-row">
               <div className="stat-card">
-                <div className="stat-value">2</div>
-                <div className="stat-label">Applications built and supported</div>
+                <div className="stat-value">132</div>
+                <div className="stat-label">Active AutoSortPro users</div>
               </div>
               <div className="stat-card">
-                <div className="stat-value">~140</div>
-                <div className="stat-label">Users across those applications</div>
+                <div className="stat-value">42 → 22h</div>
+                <div className="stat-label">One Magento year-end count using M2 InstaCount</div>
               </div>
             </div>
+            <p className="home-stats-source">Count result from <a href="https://m2instacount.com/magento-inventory-case-study/" target="_blank" rel="noopener noreferrer">one production operation</a>; results vary by workflow.</p>
           </Col>
         </Row>
 

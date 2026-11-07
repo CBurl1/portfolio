@@ -87,6 +87,11 @@ function ProjectCards(props) {
             </Button>
           )}
         </div>
+        {props.evidenceLink && (
+          <a className="project-evidence-link" href={props.evidenceLink} target="_blank" rel="noopener noreferrer">
+            {props.evidenceText || "Read the case study"}
+          </a>
+        )}
       </Card.Body>
     </Card>
   );

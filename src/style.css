@@ -910,6 +910,19 @@ a:focus-visible,
   font-size: 0.9rem;
   letter-spacing: 0.02em;
 }
+.home-stats-source {
+  margin: 12px auto 0;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-align: center;
+}
+.home-stats-source a,
+.home-about-body a,
+.about-card a {
+  color: #d7bcff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 /* =========================================================
    Sections: Projects / About / Resume shared
@@ -1095,6 +1108,18 @@ a:focus-visible,
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+.project-evidence-link {
+  align-self: flex-start;
+  margin-top: 0.8rem;
+  color: #d7bcff;
+  font-size: 0.83rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.project-evidence-link:hover,
+.project-evidence-link:focus-visible {
+  color: #fff;
 }
 
 /* Blog card (legacy) */
@@ -1630,8 +1655,8 @@ a:focus-visible,
   justify-content: center;
   gap: 28px;
   padding: 20px 28px;
-  margin: 0 auto 54px;
-  max-width: 760px;
+  margin: 0 auto 12px;
+  max-width: 900px;
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-xl);
@@ -1643,6 +1668,8 @@ a:focus-visible,
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 250px;
+  text-align: center;
 }
 .metric-strip__value {
   font-family: "Space Grotesk", sans-serif;
@@ -1674,6 +1701,19 @@ a:focus-visible,
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+.project-evidence-note {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.project-evidence-note a {
+  color: #d7bcff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .metric-strip__divider {
   width: 1px;

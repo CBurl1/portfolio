@@ -9,7 +9,7 @@ const experiences = [
     bullets: [
       "Built AutoSortPro, an AI-powered file organization application using Electron, FastAPI, React, and PostgreSQL.",
       "Integrated Auth0, Stripe, OpenAI, and AWS into product workflows for authentication, payments, file processing, and AI features.",
-      "Supported roughly 140 users across self-built applications and shipped fixes based on reported issues.",
+      "AutoSortPro reached 132 active users who organized 12.5K+ files; shipped fixes based on reported issues.",
       "Investigated bugs using API responses, logs, and database checks; documented solutions and workflows.",
     ],
   },
@@ -19,7 +19,7 @@ const experiences = [
     period: "2022 – Present",
     stack: ["Magento 2", "Python", "Flask", "React", "PostgreSQL"],
     bullets: [
-      "Built M2 InstaCount, a Python, Flask, React, and PostgreSQL inventory and receiving system integrated with Magento 2 APIs.",
+      "Built M2 InstaCount, a Python, Flask, React, and PostgreSQL tool for barcode lookup, receiving, and Veeqo batch picking.",
       "Designed around barcode workflows, inventory accuracy, and the needs of a business processing 75+ daily orders.",
       "Investigated SKU mismatches and inventory discrepancies in day-to-day operations.",
       "Maintained Magento admin and storefront updates alongside Amazon and eBay marketplace work.",

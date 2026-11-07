@@ -6,11 +6,11 @@ The source for [collinburleigh.com](https://collinburleigh.com), my portfolio of
 
 | Project | What I built | Stack |
 | --- | --- | --- |
-| [AutoSortPro](https://autosortpro.com) | AI-powered file organization application for organizing, tagging, and summarizing files; product workflows and integrations for authentication, payments, and AI features | Electron, React, FastAPI, PostgreSQL, Auth0, Stripe, OpenAI, AWS |
-| [M2 InstaCount](https://m2instacount.com) | Inventory and receiving tool for Magento 2 operations, including barcode workflows and inventory accuracy checks | Python, Flask, React, PostgreSQL, Magento 2 API |
+| [AutoSortPro](https://autosortpro.com/#impact) | AI-powered file organization application with searchable metadata and portable exports; its public case study reports 12.5K+ files organized by 132 active users before service shutdown | Electron, React, FastAPI, PostgreSQL, Auth0, Stripe, OpenAI, AWS |
+| [M2 InstaCount](https://m2instacount.com) | Magento 2 barcode lookup, receiving with CSV export, and Veeqo batch picking; [one-operation case study](https://m2instacount.com/magento-inventory-case-study/) reports a roughly 4,500-SKU count taking 22 hours versus 42 before | Python, Flask, React, PostgreSQL, Magento 2 API, Veeqo API |
 | [OpenHome](https://www.loom.com/share/a29cbce183324c6fa0dc31b8ea0389e8) | Python application for an AI-powered smart-home OS prototype presented to 100+ potential investors in 2024 | Python, AI, voice |
 
-AutoSortPro and M2 InstaCount have served roughly 140 users across both applications. I have also supported users, investigated reported issues, and shipped fixes after launch. The professional roles on the site and résumé retain their original titles.
+The portfolio uses product-specific evidence instead of an unsourced combined user count. AutoSortPro's public case study reports 132 active users and 12.5K+ files organized. M2 InstaCount's measured results describe one operation and are not guarantees. I have also supported users, investigated reported issues, and shipped fixes after launch. The professional roles on the site and résumé retain their original titles.
 
 The production applications above are maintained separately; this repository contains the portfolio frontend.
 

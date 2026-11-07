@@ -25,10 +25,7 @@ function AboutCard() {
         meant to solve.
       </p>
       <p>
-        My applications have reached roughly <span className="purple">140 users</span>.
-        Supporting them has made me a more practical developer: I investigate
-        issues with API responses, logs, and database checks, ship fixes, and
-        document the resulting workflows.
+        AutoSortPro's <a href="https://autosortpro.com/#impact" target="_blank" rel="noopener noreferrer">public case study</a> reports <span className="purple">132 active users</span> and <span className="purple">12.5K+ files organized</span>. Supporting users has made me a more practical developer: I investigate issues with API responses, logs, and database checks, ship fixes, and document the resulting workflows.
       </p>
     </div>
   );

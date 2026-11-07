@@ -172,7 +172,7 @@ def main():
             "Electron, React, FastAPI, PostgreSQL, Auth0, Stripe, OpenAI, AWS",
             [
                 "Built an AI-powered file organization application that organizes, tags, and summarizes files.",
-                "Implemented product workflows and integrations for authentication, payments, AI features, and file processing.",
+                "Reached 132 active users and organized 12.5K+ files; implemented authentication, payments, AI features, and file processing.",
             ],
         )
     )
@@ -181,8 +181,8 @@ def main():
             "M2 InstaCount",
             "Python, Flask, React, PostgreSQL, Magento 2 API",
             [
-                "Built an inventory and receiving tool with barcode workflows and inventory accuracy checks.",
-                "Integrated the application with Magento 2 APIs for use in a live ecommerce operation.",
+                "Built scanner-based Magento product lookup, receiving with CSV export, and Veeqo batch picking.",
+                "In one operation, a roughly 4,500-SKU year-end count took 22 hours versus 42 before; four timed picks averaged 22% less time.",
             ],
         )
     )
@@ -201,7 +201,7 @@ def main():
             "Freelance Software Developer  |  Remote  |  Jun 2023 - Present",
             "",
             [
-                "Built and supported applications used by approximately 140 users; shipped fixes based on reported issues.",
+                "Built and supported full-stack applications; shipped fixes based on reported user issues.",
                 "Investigated authentication, payments, file-processing, and API issues using logs, API responses, and database checks.",
             ],
         )

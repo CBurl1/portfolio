@@ -20,5 +20,7 @@ test("presents software engineering work and navigates to projects", () => {
   expect(screen.getByRole("heading", { name: /Applications I've built in the real world/i })).toBeInTheDocument();
   expect(screen.getByText("AutoSortPro")).toBeInTheDocument();
   expect(screen.getByText("M2 InstaCount")).toBeInTheDocument();
+  expect(screen.getByText("12.5K+")).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /Results and methodology/i })).toHaveAttribute("href", "https://m2instacount.com/magento-inventory-case-study/");
   expect(screen.getAllByText("OpenHome").length).toBeGreaterThan(0);
 });
