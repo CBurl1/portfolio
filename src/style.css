@@ -82,7 +82,7 @@ p{line-height:1.75}
 .stat-value{font:700 2rem/1.1 "Space Grotesk",sans-serif;letter-spacing:-.04em;color:var(--ink)}
 .stat-label{font-size:.78rem;color:var(--muted);margin-top:.42rem}
 .home-stats-source{margin:.8rem 0 0;color:#88959c;font-size:.69rem}
-.home-about-social{margin-top:4.6rem;padding-top:2.2rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.home-about-social{margin-top:4.6rem;padding-top:2.2rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:flex-start;gap:1.4rem}
 .home-about-social h2{font-size:1.55rem;font-weight:700;margin:0}
 .home-about-social-links,.footer-icons{display:flex;gap:.55rem;list-style:none;margin:0;padding:0}
 .social-icons{display:inline-block}
@@ -143,14 +143,16 @@ p{line-height:1.75}
 .timeline__stack{display:flex;flex-wrap:wrap;gap:.35rem;margin:.9rem 0}
 .timeline__bullets{color:#5c6a75;padding-left:1.1rem;margin:.7rem 0 0;font-size:.78rem;line-height:1.65}
 .timeline__bullets li+li{margin-top:.28rem}
-.tech-icons{background:#fff;border:1px solid var(--line);border-radius:8px;margin:0 0 .55rem!important;padding:1rem .4rem!important;color:var(--blue);min-height:95px;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:1.5rem}
-.tech-icons:hover{border-color:#a9c3e9;background:#f8fbff}
-.tech-icons p{color:#556570;margin:.35rem 0 0;font-weight:600}
-.interest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
-.interest-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.35rem}
-.interest-card__icon{font-size:1.45rem;color:var(--blue);margin-bottom:.55rem}
-.interest-card__title{font-size:1rem;font-weight:700;margin:0 0 .4rem}
-.interest-card__body{font-size:.77rem;color:var(--muted);line-height:1.6;margin:0}
+.skillset-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem;margin-top:1.2rem}
+.skill-panel{min-width:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.65rem}
+.skill-panel .project-heading{font-size:1.55rem;margin:0 0 .25rem}
+.skill-panel>p{font-size:.77rem;color:var(--muted);line-height:1.6;margin:0 0 1.3rem;min-height:2.5rem}
+.skill-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.45rem}
+.skill-item{display:flex;align-items:center;gap:.55rem;min-width:0;min-height:43px;padding:.55rem .63rem;border:1px solid #e4ebec;border-radius:7px;background:#f8faf9;color:#4c5e6b;font-size:.76rem;font-weight:600;white-space:nowrap}
+.skill-item svg{flex:none;color:var(--blue);font-size:1.12rem}
+.outdoors-feature{display:flex;align-items:center;gap:1.1rem;max-width:720px;padding:1.35rem 1.5rem;background:#eaf4f0;border:1px solid #d5e6df;border-radius:11px}
+.outdoors-feature__icon{width:45px;height:45px;flex:none;display:flex;align-items:center;justify-content:center;border-radius:9px;background:#fff;color:var(--green);font-size:1.45rem}
+.outdoors-feature p{margin:0;color:#38594f;font-size:.92rem;line-height:1.65}
 .github-frame{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.3rem;overflow:auto}
 .github-calendar{color:var(--muted);font-size:.75rem}
 
@@ -207,10 +209,7 @@ p{line-height:1.75}
  .project-card{padding:0 .575rem!important}
  .project-card-view{max-width:650px;margin:0 auto}
  .project-actions{flex-direction:row}
- .interest-grid{grid-template-columns:1fr}
- .interest-card{display:grid;grid-template-columns:34px 1fr;column-gap:.55rem;align-items:start}
- .interest-card__icon{grid-row:span 2;margin:0}
- .interest-card__title{margin:0 0 .2rem}
+ .skillset-grid{grid-template-columns:1fr}
  .footer .row{gap:.7rem}
  .footer-body{justify-content:flex-start}
 }
@@ -249,6 +248,12 @@ p{line-height:1.75}
  .project-card-view .card-text{font-size:.81rem!important}
  .project-actions .btn{font-size:.67rem!important}
  .about-block{padding:2rem 0 2.4rem}
+ .skill-panel{padding:1.2rem}
+ .skill-panel .project-heading{font-size:1.42rem}
+ .skill-panel>p{min-height:0;margin-bottom:1rem}
+ .skill-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .outdoors-feature{padding:1rem;gap:.8rem}
+ .outdoors-feature p{font-size:.83rem}
  .about-card{padding:1.15rem;font-size:.82rem}
  .timeline{padding-left:1.2rem}
  .timeline__dot{left:-1.61rem}

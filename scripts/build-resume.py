@@ -4,7 +4,7 @@
 from pathlib import Path
 
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER, TA_LEFT
+from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
@@ -24,10 +24,10 @@ OUTPUT = (
     Path(__file__).resolve().parent.parent
     / "src/Assets/Collin_Burleigh_Software_Engineer_Resume.pdf"
 )
-INK = colors.HexColor("#20283a")
-MUTED = colors.HexColor("#4d5b73")
-ACCENT = colors.HexColor("#7040b8")
-LINE = colors.HexColor("#d7dce6")
+INK = colors.HexColor("#142331")
+MUTED = colors.HexColor("#526372")
+ACCENT = colors.HexColor("#2458b8")
+LINE = colors.HexColor("#dce4e4")
 
 
 def style(name, size, leading=None, bold=False, color=INK, space_after=0):
@@ -45,10 +45,10 @@ def style(name, size, leading=None, bold=False, color=INK, space_after=0):
 NAME = ParagraphStyle(
     "name",
     fontName="Helvetica-Bold",
-    fontSize=22,
-    leading=25,
+    fontSize=25,
+    leading=28,
     textColor=INK,
-    alignment=TA_CENTER,
+    alignment=TA_LEFT,
 )
 HEADLINE = ParagraphStyle(
     "headline",
@@ -56,7 +56,7 @@ HEADLINE = ParagraphStyle(
     fontSize=10,
     leading=13,
     textColor=ACCENT,
-    alignment=TA_CENTER,
+    alignment=TA_LEFT,
 )
 CONTACT = ParagraphStyle(
     "contact",
@@ -64,7 +64,7 @@ CONTACT = ParagraphStyle(
     fontSize=8,
     leading=11,
     textColor=MUTED,
-    alignment=TA_CENTER,
+    alignment=TA_LEFT,
 )
 BODY = style("body", 9.2, 12.4)
 SMALL = style("small", 8.85, 11.7)
@@ -100,6 +100,12 @@ def draw_page(canvas, doc):
     canvas.saveState()
     canvas.setTitle("Collin Burleigh - Software Engineer Resume")
     canvas.setAuthor("Collin Burleigh")
+    canvas.setStrokeColor(LINE)
+    canvas.setLineWidth(0.6)
+    canvas.line(38, letter[1] - 23, letter[0] - 38, letter[1] - 23)
+    canvas.setStrokeColor(ACCENT)
+    canvas.setLineWidth(2.2)
+    canvas.line(38, letter[1] - 23, 92, letter[1] - 23)
     canvas.setStrokeColor(LINE)
     canvas.setLineWidth(0.5)
     canvas.line(38, 35, letter[0] - 38, 35)

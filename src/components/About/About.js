@@ -44,53 +44,30 @@ function About() {
           </Row>
         </section>
 
-        <section className="about-block">
+        <section className="about-block skillset-section">
           <div style={{ textAlign: "center" }}>
             <span className="section-eyebrow">03 · Skillset</span>
           </div>
-          <Row style={{ justifyContent: "center" }}>
-            <Col
-              lg={6}
-              md={12}
-              style={{ paddingTop: "20px", paddingBottom: "30px" }}
-            >
-              <h2
-                className="project-heading"
-                style={{ textAlign: "center", marginBottom: "30px" }}
-              >
-                Professional <strong className="purple">Skillset</strong>
-              </h2>
+          <div className="skillset-grid">
+            <div className="skill-panel">
+              <h2 className="project-heading">Core <strong className="purple">technologies</strong></h2>
+              <p>Languages, frameworks, and data tools I use to build applications.</p>
               <Techstack />
-            </Col>
-
-            <Col
-              lg={6}
-              md={12}
-              style={{ paddingTop: "20px", paddingBottom: "30px" }}
-            >
-              <h2
-                className="project-heading"
-                style={{ textAlign: "center", marginBottom: "30px" }}
-              >
-                <strong className="purple">Tools</strong> I use
-              </h2>
+            </div>
+            <div className="skill-panel">
+              <h2 className="project-heading">Tools &amp; <strong className="purple">platforms</strong></h2>
+              <p>Tools and services I've used in product and operational work.</p>
               <Toolstack />
-            </Col>
-          </Row>
+            </div>
+          </div>
         </section>
 
         <section className="about-block">
           <div style={{ textAlign: "center" }}>
             <span className="section-eyebrow">04 · Outside of work</span>
           </div>
-          <h2 className="project-heading" style={{ textAlign: "center" }}>
-            A few things I <strong className="purple">enjoy</strong>
-          </h2>
-          <Row style={{ justifyContent: "center" }}>
-            <Col lg={10} md={11} sm={12}>
-              <OutsideWork />
-            </Col>
-          </Row>
+          <h2 className="project-heading">Time <strong className="purple">outdoors</strong></h2>
+          <OutsideWork />
         </section>
 
         <section className="about-block">
