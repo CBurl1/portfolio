@@ -76,24 +76,24 @@
   <text x="80" y="430"
         font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
         font-size="56" font-weight="700" fill="url(#accent)" letter-spacing="-1.5">
-    Technical Support Engineer
+    Software Engineer
   </text>
 
   <text x="80" y="485"
         font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
         font-size="28" font-weight="500" fill="#d8d2e8" letter-spacing="-0.2">
-    Shipping &amp; supporting SaaS &#8212; React &#183; Python/FastAPI &#183; Magento 2 &#183; AWS
+    Full-stack applications &#8212; React &#183; Python/FastAPI &#183; PostgreSQL
   </text>
 
   <g transform="translate(80, 530)" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
      font-size="22" font-weight="600" fill="#f5f3ff">
     <g transform="translate(0, 0)">
       <rect width="180" height="44" rx="22" ry="22" fill="rgba(255,255,255,0.06)" stroke="#a855f7" stroke-opacity="0.45"/>
-      <text x="90" y="29" text-anchor="middle">~140 users</text>
+      <text x="90" y="29" text-anchor="middle">React + Python</text>
     </g>
     <g transform="translate(200, 0)">
       <rect width="230" height="44" rx="22" ry="22" fill="rgba(255,255,255,0.06)" stroke="#a855f7" stroke-opacity="0.45"/>
-      <text x="115" y="29" text-anchor="middle">2 SaaS products live</text>
+      <text x="115" y="29" text-anchor="middle">2 applications built</text>
     </g>
     <g transform="translate(450, 0)">
       <rect width="320" height="44" rx="22" ry="22" fill="rgba(255,255,255,0.06)" stroke="#38bdf8" stroke-opacity="0.55"/>

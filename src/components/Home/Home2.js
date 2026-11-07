@@ -12,33 +12,26 @@ function Home2() {
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              About <span className="purple"> Me </span>
-            </h1>
+            <h2 className="home-about-heading">
+              Engineering <span className="purple">in practice</span>
+            </h2>
             <p className="home-about-body">
-              <span className="purple">Technical Support Engineer</span> with hands-on experience
-              supporting <span className="purple">SaaS and ecommerce systems</span> in production.
-              I've supported roughly <span className="purple">140 users</span> across self-built
-              applications — handling onboarding, issue resolution, workflow questions, and product
-              fixes.
+              I build software for real workflows, from an{" "}
+              <span className="purple">AI-powered file organizer</span> to a{" "}
+              <span className="purple">Magento 2 inventory tool</span>. My work
+              spans product design, application code, integrations, and the
+              fixes needed after launch.
               <br />
               <br />
-              I work fluently across the stack, using{" "}
-              <i>
-                <b className="purple">
-                  Python, Flask, FastAPI, JavaScript, React, PostgreSQL, SQLite, and Electron
-                </b>
-              </i>{" "}
-              to reproduce bugs, investigate issues via API responses, logs, and database checks,
-              and ship fixes end-to-end.
+              I work across <span className="purple">React, JavaScript, Python,
+              Flask, FastAPI, PostgreSQL, and Electron</span>, with integrations
+              including Auth0, Stripe, OpenAI, Magento 2, and AWS.
               <br />
               <br />
-              I'm experienced integrating{" "}
-              <i>
-                <b className="purple">Auth0, Stripe, OpenAI, Magento 2, and AWS</b>
-              </i>{" "}
-              (IAM, S3, SES, Rekognition) — and strong at closing tickets clearly for
-              non-technical users.
+              Building for users has kept me close to the product after release:
+              I've supported roughly <span className="purple">140 users</span>{" "}
+              across my applications, investigated issues, and shipped fixes
+              informed by their feedback.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -50,12 +43,12 @@ function Home2() {
           <Col md={12}>
             <div className="stats-row">
               <div className="stat-card">
-                <div className="stat-value">~140</div>
-                <div className="stat-label">Users supported</div>
+                <div className="stat-value">2</div>
+                <div className="stat-label">Applications built and supported</div>
               </div>
               <div className="stat-card">
-                <div className="stat-value">2</div>
-                <div className="stat-label">SaaS products shipped &amp; supported</div>
+                <div className="stat-value">~140</div>
+                <div className="stat-label">Users across those applications</div>
               </div>
             </div>
           </Col>
@@ -63,9 +56,9 @@ function Home2() {
 
         <Row>
           <Col md={12} className="home-about-social">
-            <h1>
+            <h2>
               Let's <span className="purple">Connect:</span>
-            </h1>
+            </h2>
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a

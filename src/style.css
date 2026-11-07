@@ -15,11 +15,12 @@ html {
     0 0 6px rgba(192, 132, 252, 0.28);
 }
 
-button:focus,
-a:focus,
-.btn:focus {
-  outline: none !important;
-  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.35) !important;
+button:focus-visible,
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid #e9d5ff !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 6px rgba(168, 85, 247, 0.25) !important;
 }
 
 /* =========================================================
@@ -110,9 +111,7 @@ a:focus,
   opacity: 1 !important;
   transition: transform 0.35s ease, opacity 0.2s ease !important;
 }
-.navbar-toggler:focus,
 .navbar-toggler:active {
-  outline: 0 !important;
   box-shadow: none !important;
 }
 .navbar-toggler:not(.collapsed) span:nth-child(1) {
@@ -307,15 +306,24 @@ a:focus,
 }
 
 .heading-name {
-  font-size: 3em !important;
+  font-size: clamp(2.5rem, 4.4vw, 4.25rem) !important;
   padding-left: 45px !important;
   font-weight: 700 !important;
   letter-spacing: -0.02em !important;
   line-height: 1.15 !important;
   color: var(--text-primary);
+  max-width: 800px;
 }
 
-/* main-name + Typewriter colors live in index.css (Brave-safe, no background-clip) */
+.hero-summary {
+  margin: 26px 0 28px 50px;
+  max-width: 38rem;
+  color: var(--text-secondary);
+  font-size: 1.12rem;
+  line-height: 1.7;
+}
+
+/* main-name colors live in index.css (Brave-safe, no background-clip) */
 
 .Typewriter__wrapper {
   font-size: 2.1em !important;
@@ -332,8 +340,12 @@ a:focus,
     padding-left: 12px !important;
   }
   .heading-name {
-    font-size: 2.2em !important;
+    font-size: clamp(2.2rem, 9vw, 3.1rem) !important;
     padding-left: 12px !important;
+  }
+  .hero-summary {
+    margin: 20px 12px 26px;
+    font-size: 1rem;
   }
   .Typewriter__wrapper {
     font-size: 1.4em !important;
@@ -371,6 +383,7 @@ a:focus,
   border: none !important;
   border-radius: 999px !important;
   color: #fff !important;
+  text-decoration: none !important;
   font-weight: 600 !important;
   background: var(--gradient-primary) !important;
   box-shadow: 0 10px 25px -10px rgba(168, 85, 247, 0.7) !important;
@@ -389,6 +402,7 @@ a:focus,
   padding: 0.7rem 1.4rem !important;
   border-radius: 999px !important;
   color: #fff !important;
+  text-decoration: none !important;
   font-weight: 600 !important;
   background: rgba(255, 255, 255, 0.04) !important;
   border: 1px solid rgba(192, 132, 252, 0.4) !important;
@@ -401,7 +415,7 @@ a:focus,
 }
 
 /* =========================================================
-   Hero Visual (support console card)
+   Hero Visual (selected builds card)
    ========================================================= */
 .hero-visual {
   position: relative;
@@ -502,7 +516,7 @@ a:focus,
   opacity: 0;
   transform: translateY(4px);
   animation: hvReveal 0.4s ease forwards;
-  white-space: nowrap;
+  white-space: normal;
 }
 @keyframes hvReveal {
   to { opacity: 1; transform: translateY(0); }
@@ -732,9 +746,13 @@ a:focus,
   text-align: center;
 }
 
-.home-about-description h1 {
+.home-about-heading,
+.home-about-social h2 {
   font-weight: 700 !important;
   letter-spacing: -0.02em !important;
+}
+.home-about-heading {
+  font-size: clamp(2rem, 4vw, 2.7rem);
 }
 
 .home-about-body {
@@ -750,7 +768,7 @@ a:focus,
   padding-top: 35px;
   color: var(--text-primary) !important;
 }
-.home-about-social h1 {
+.home-about-social h2 {
   font-weight: 700 !important;
   margin-bottom: 4px;
 }
@@ -1022,6 +1040,39 @@ a:focus,
   );
   pointer-events: none;
 }
+.project-card-visual {
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: #f5efff;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(56, 189, 248, 0.25), transparent 44%),
+    linear-gradient(135deg, #1c1640, #0e1b32 75%);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+.project-card-visual svg {
+  color: #8bd6ff;
+  font-size: 2.7rem;
+}
+.project-card-visual small {
+  color: #b8c6de;
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+.project-card-category {
+  margin-bottom: 0.5rem;
+  color: #c4b5fd;
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
 .project-tags {
   display: flex;
@@ -1091,8 +1142,14 @@ a:focus,
   transform: translateY(-2px);
   box-shadow: 0 14px 28px -10px rgba(168, 85, 247, 0.85) !important;
 }
-.btn:focus {
-  outline: none !important;
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* =========================================================
