@@ -1,28 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <linearGradient id="cb-bg" x1="8%" y1="0%" x2="92%" y2="100%">
-      <stop offset="0%"   stop-color="#c084fc"/>
-      <stop offset="55%"  stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#6d28d9"/>
-    </linearGradient>
-    <radialGradient id="cb-shine" cx="28%" cy="22%" r="55%">
-      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="cb-glow" cx="50%" cy="115%" r="70%">
-      <stop offset="0%"   stop-color="#38bdf8" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-
-  <rect width="64" height="64" rx="14" ry="14" fill="url(#cb-bg)"/>
-  <rect width="64" height="64" rx="14" ry="14" fill="url(#cb-glow)"/>
-  <rect width="64" height="64" rx="14" ry="14" fill="url(#cb-shine)"/>
-  <rect x="0.5" y="0.5" width="63" height="63" rx="13.5" ry="13.5"
-        fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
-
-  <text x="32" y="45" text-anchor="middle"
-        font-family="'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif"
-        font-size="32" font-weight="900"
-        fill="#ffffff" letter-spacing="-1.2">CB</text>
+  <rect width="64" height="64" rx="14" fill="#2458b8"/>
+  <path d="M7 8h50" stroke="#8fb5ef" stroke-width="2" opacity=".75"/>
+  <text x="32" y="43" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="29" font-weight="700" letter-spacing="-2" fill="#fff">CB.</text>
 </svg>
