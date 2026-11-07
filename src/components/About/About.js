@@ -16,9 +16,9 @@ function About() {
       <Container>
         <PageHeader
           eyebrow="About · Collin Burleigh"
-          title="Technical Support Engineer"
-          accent="shipping & supporting SaaS"
-          subtitle="Hands-on engineer who builds, ships, and supports the software end-to-end — from the first ticket to the fix in production."
+          title="Software engineer"
+          accent="building across the stack"
+          subtitle="I turn operational problems into working applications, then improve them through direct feedback from the people who use them."
         />
 
         <section className="about-block">

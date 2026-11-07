@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import PageHeader from "../PageHeader";
-import openhome from "../../Assets/Projects/wellness-journal.png";
 import m2 from "../../Assets/Projects/m2-instacount.png";
 import autosort from "../../Assets/Projects/AutoSortPro.png";
 
@@ -15,24 +14,24 @@ function Projects() {
         <PageHeader
           eyebrow="01 · Selected Work"
           title="Applications I've"
-          accent="shipped & supported"
-          subtitle="SaaS products, ecommerce tooling, and AI prototypes — built and supported end-to-end."
+          accent="built in the real world"
+          subtitle="Full-stack applications, ecommerce tooling, and a Python prototype. Each project began with a concrete workflow to solve."
         />
 
         <div className="metric-strip">
           <div className="metric-strip__item">
-            <span className="metric-strip__value">~140</span>
-            <span className="metric-strip__label">Users supported</span>
-          </div>
-          <div className="metric-strip__divider" aria-hidden="true" />
-          <div className="metric-strip__item">
             <span className="metric-strip__value">2</span>
-            <span className="metric-strip__label">SaaS products shipped</span>
+            <span className="metric-strip__label">Applications built</span>
           </div>
           <div className="metric-strip__divider" aria-hidden="true" />
           <div className="metric-strip__item">
-            <span className="metric-strip__value">Jun '23</span>
-            <span className="metric-strip__label">Freelancing since</span>
+            <span className="metric-strip__value">~140</span>
+            <span className="metric-strip__label">Users across my apps</span>
+          </div>
+          <div className="metric-strip__divider" aria-hidden="true" />
+          <div className="metric-strip__item">
+            <span className="metric-strip__value">3</span>
+            <span className="metric-strip__label">Featured builds</span>
           </div>
         </div>
 
@@ -44,13 +43,13 @@ function Projects() {
           >
             <ProjectCard
               imgPath={autosort}
-              isBlog={false}
-              title="AutoSortPro – AI-Based File Organization"
-              description="AI-based file organization app that organizes, tags, and summarizes files. I supported users directly while improving product workflows and shipping fixes for reported issues."
+              imageAlt="AutoSortPro file organization app preview"
+              category="Desktop and web application"
+              title="AutoSortPro"
+              description="Built an AI-powered file organizer for tagging, summarizing, and organizing files. Implemented product workflows and integrations across Electron, FastAPI, React, PostgreSQL, Auth0, Stripe, OpenAI, and AWS."
               tags={["Electron", "FastAPI", "React", "PostgreSQL", "Auth0", "Stripe", "OpenAI", "AWS"]}
-              showGitHub={false}
               demoLink="https://autosortpro.com"
-              buttonText="Case Study"
+              buttonText="Visit product"
               videoDemo="https://www.youtube.com/watch?v=VLEiTljMmFk"
             />
           </Col>
@@ -62,13 +61,13 @@ function Projects() {
           >
             <ProjectCard
               imgPath={m2}
-              isBlog={false}
-              title="M2 InstaCount – Magento 2 Inventory Tool"
-              description="Inventory and receiving tool for Magento 2 operations — barcode workflows and inventory accuracy. Combines product development with hands-on operational support inside a live ecommerce business."
+              imageAlt="M2 InstaCount inventory tool preview"
+              category="Full-stack ecommerce tool"
+              title="M2 InstaCount"
+              description="Built an inventory and receiving tool for Magento 2 operations, connecting barcode workflows and inventory checks to a Python, Flask, React, and PostgreSQL application."
               tags={["Python", "Flask", "React", "PostgreSQL", "Magento 2 API"]}
-              showGitHub={false}
               demoLink="https://m2instacount.com"
-              buttonText="Live"
+              buttonText="Visit product"
               videoDemo="https://www.youtube.com/watch?v=m02yoiAsPDY"
             />
           </Col>
@@ -79,12 +78,11 @@ function Projects() {
             style={{ display: "flex", alignItems: "stretch" }}
           >
             <ProjectCard
-              imgPath={openhome}
-              isBlog={false}
-              title="OpenHome – AI Smart Home OS Prototype"
-              description="Python application built for OpenHome's AI-powered smart home OS, delivered as part of a prototype presented to 100+ potential investors. Grant-funded work, January – April 2024."
+              visualLabel="OpenHome"
+              category="Python prototype"
+              title="OpenHome"
+              description="Developed a Python application for an AI-powered smart-home OS prototype. The grant-funded work was presented to more than 100 potential investors in 2024."
               tags={["Python", "AI", "Voice", "Prototype"]}
-              showGitHub={false}
               videoDemo="https://www.loom.com/share/a29cbce183324c6fa0dc31b8ea0389e8"
             />
           </Col>

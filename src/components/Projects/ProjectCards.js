@@ -2,22 +2,31 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
-import { BsGithub, BsPlayCircle } from "react-icons/bs";
+import { BsPlayCircle } from "react-icons/bs";
+import { AiOutlineHome } from "react-icons/ai";
 
 function ProjectCards(props) {
   return (
     <Card className="project-card-view" style={{ width: "100%" }}>
       <div className="project-card-imagewrap">
-        <Card.Img
-          variant="top"
-          src={props.imgPath}
-          alt="card-img"
-          style={{
-            height: "210px",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-        />
+        {props.imgPath ? (
+          <Card.Img
+            variant="top"
+            src={props.imgPath}
+            alt={props.imageAlt || props.title}
+            style={{
+              height: "210px",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+          />
+        ) : (
+          <div className="project-card-visual" aria-hidden="true">
+            <AiOutlineHome />
+            <span>{props.visualLabel}</span>
+            <small>Python · AI prototype</small>
+          </div>
+        )}
         <span className="project-card-image-shade" aria-hidden="true" />
       </div>
 
@@ -29,6 +38,7 @@ function ProjectCards(props) {
           flex: "1",
         }}
       >
+        <div className="project-card-category">{props.category}</div>
         <Card.Title
           style={{
             marginBottom: "0.75rem",
@@ -65,20 +75,14 @@ function ProjectCards(props) {
         )}
 
         <div className="project-actions">
-          {props.showGitHub !== false && (
-            <Button variant="primary" href={props.ghLink} target="_blank">
-              <BsGithub /> &nbsp;{props.isBlog ? "Blog" : "GitHub"}
-            </Button>
-          )}
-
-          {!props.isBlog && props.demoLink && (
-            <Button variant="primary" href={props.demoLink} target="_blank">
+          {props.demoLink && (
+            <Button variant="primary" href={props.demoLink} target="_blank" rel="noopener noreferrer">
               <CgWebsite /> &nbsp;{props.buttonText || "Demo"}
             </Button>
           )}
 
-          {!props.isBlog && props.videoDemo && (
-            <Button variant="primary" href={props.videoDemo} target="_blank">
+          {props.videoDemo && (
+            <Button variant="primary" href={props.videoDemo} target="_blank" rel="noopener noreferrer">
               <BsPlayCircle /> &nbsp;Demo Video
             </Button>
           )}

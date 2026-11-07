@@ -2,14 +2,12 @@ import React from "react";
 
 function HeroVisual() {
   const lines = [
-    { prompt: "$", cmd: "open ticket/#1423" },
-    { out: "status: resolved", tone: "good" },
-    { prompt: "$", cmd: "trace stripe.webhook.signature" },
-    { out: "200 OK · verified", tone: "good" },
-    { prompt: "$", cmd: "magento/inventory --reconcile" },
-    { out: "sku mismatch · 2 fixed", tone: "warn" },
-    { prompt: "$", cmd: 'docs --update "refund flow"' },
-    { out: "shipped · saves repeat questions", tone: "good" },
+    { prompt: "›", cmd: "AutoSortPro" },
+    { out: "Electron · React · FastAPI", tone: "good" },
+    { out: "Auth0 · Stripe · OpenAI · AWS", tone: "good" },
+    { prompt: "›", cmd: "M2 InstaCount" },
+    { out: "React · Flask · PostgreSQL", tone: "good" },
+    { out: "Magento 2 API · barcode workflows", tone: "warn" },
   ];
 
   return (
@@ -21,13 +19,13 @@ function HeroVisual() {
           <span className="chrome-dot chrome-dot--red" />
           <span className="chrome-dot chrome-dot--yellow" />
           <span className="chrome-dot chrome-dot--green" />
-          <span className="hero-visual__title">collin@support ~ tickets</span>
+          <span className="hero-visual__title">collin / selected builds</span>
         </div>
 
         <div className="hero-visual__tabs">
-          <span className="hv-chip hv-chip--active">autosortpro</span>
-          <span className="hv-chip">m2-instacount</span>
-          <span className="hv-chip">prod-logs</span>
+          <span className="hv-chip hv-chip--active">frontend</span>
+          <span className="hv-chip">backend</span>
+          <span className="hv-chip">integrations</span>
         </div>
 
         <div className="hero-visual__body">
@@ -44,21 +42,17 @@ function HeroVisual() {
               </div>
             )
           )}
-          <div className="hv-line hv-line--cursor" style={{ animationDelay: "1400ms" }}>
-            <span className="hv-prompt">$</span>
-            <span className="hv-caret" />
-          </div>
         </div>
       </div>
 
       <div className="hero-visual__badge hero-visual__badge--top">
         <span className="hv-badge-dot" />
-        <span>live · production</span>
+        <span>built &amp; shipped</span>
       </div>
       <div className="hero-visual__badge hero-visual__badge--bottom">
-        <span className="hv-badge-tag">Auth0</span>
-        <span className="hv-badge-tag">Stripe</span>
-        <span className="hv-badge-tag">AWS</span>
+        <span className="hv-badge-tag">React</span>
+        <span className="hv-badge-tag">Python</span>
+        <span className="hv-badge-tag">PostgreSQL</span>
       </div>
     </div>
   );

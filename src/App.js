@@ -13,6 +13,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import PageMeta from "./components/PageMeta";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <Router>
+      <PageMeta />
       <Preloader load={load} />
       <div className="grain-overlay" aria-hidden="true" />
       <div className="App" id={load ? "no-scroll" : "scroll"}>

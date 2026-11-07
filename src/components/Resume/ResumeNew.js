@@ -7,17 +7,16 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import Particle from "../Particle";
 import PageHeader from "../PageHeader";
-import pdf from "../../Assets/Collin_Burleigh_Technical_Support_Engineer_Resume.pdf";
+import pdf from "../../Assets/Collin_Burleigh_Software_Engineer_Resume.pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const highlights = [
-  "Technical Support Engineer",
-  "Application Support",
-  "SaaS Troubleshooting",
-  "~140 users supported",
-  "Magento 2 · Auth0 · Stripe · AWS",
-  "Python · React · FastAPI",
+  "Software Engineer",
+  "React · Python · FastAPI",
+  "PostgreSQL · Electron",
+  "Auth0 · Stripe · OpenAI · AWS",
+  "Magento 2 API",
 ];
 
 function ResumeNew() {
@@ -40,7 +39,7 @@ function ResumeNew() {
           eyebrow="Résumé"
           title="My"
           accent="résumé"
-          subtitle="A one-page overview of my experience as a Technical Support Engineer building and supporting SaaS and ecommerce systems."
+          subtitle="A one-page overview of the applications I've built, the technologies I've used, and the roles I've held."
         />
 
         <div className="resume-highlights">
@@ -58,7 +57,7 @@ function ResumeNew() {
           <Button
             variant="primary"
             href={pdf}
-            download="Collin_Burleigh_Technical_Support_Engineer_Resume.pdf"
+            download="Collin_Burleigh_Software_Engineer_Resume.pdf"
             style={{ maxWidth: "220px", marginRight: "10px" }}
           >
             <AiOutlineDownload />
@@ -89,7 +88,7 @@ function ResumeNew() {
           <Button
             variant="primary"
             href={pdf}
-            download="Collin_Burleigh_Technical_Support_Engineer_Resume.pdf"
+            download="Collin_Burleigh_Software_Engineer_Resume.pdf"
             style={{ maxWidth: "220px" }}
           >
             <AiOutlineDownload />

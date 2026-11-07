@@ -4,29 +4,31 @@ function AboutCard() {
   return (
     <div className="about-card">
       <p>
-        I'm <span className="purple">Collin Burleigh</span>, a{" "}
-        <span className="purple">Technical Support Engineer</span> focused on{" "}
-        <span className="purple">SaaS and ecommerce systems</span> in production.
+        I'm <span className="purple">Collin Burleigh</span>, a software
+        developer focused on <span className="purple">full-stack applications</span>{" "}
+        for SaaS and ecommerce workflows.
       </p>
       <p>
-        Since June 2023 I've built and supported applications used by{" "}
-        <span className="purple">~140 users</span>, handling onboarding, bug reports, and ongoing
-        product issues. I'm the developer behind <span className="purple">M2 InstaCount</span> and{" "}
-        <span className="purple">AutoSortPro</span>, where I've diagnosed and resolved issues
-        across authentication, payments, file processing, and API-driven workflows with{" "}
-        <span className="purple">Auth0, Stripe, and AWS</span>.
+        Since June 2023 I've built <span className="purple">AutoSortPro</span>{" "}
+        and <span className="purple">M2 InstaCount</span>. Across those products,
+        I've worked with React, Electron, Python, Flask, FastAPI, and PostgreSQL,
+        connecting authentication, payments, file processing, and API-driven
+        workflows with <span className="purple">Auth0, Stripe, OpenAI, Magento 2,
+        and AWS</span>.
       </p>
       <p>
         Alongside my freelance work, I'm a{" "}
         <span className="purple">Technical Systems Engineer</span> for a family Magento ecommerce
-        business processing <span className="purple">75+ daily orders</span>, where I support
-        fulfillment, receiving, inventory, and catalog workflows, troubleshoot SKU and inventory
-        discrepancies, and make day-to-day Magento admin and storefront updates.
+        business processing <span className="purple">75+ daily orders</span>.
+        I built M2 InstaCount around its inventory and receiving workflows,
+        and I continue to work with the operational problems the software is
+        meant to solve.
       </p>
       <p>
-        I'm strong at reproducing bugs, investigating issues with API responses, logs, and
-        database checks, and closing tickets clearly for non-technical users — and I write the
-        documentation that reduces repeat questions.
+        My applications have reached roughly <span className="purple">140 users</span>.
+        Supporting them has made me a more practical developer: I investigate
+        issues with API responses, logs, and database checks, ship fixes, and
+        document the resulting workflows.
       </p>
     </div>
   );

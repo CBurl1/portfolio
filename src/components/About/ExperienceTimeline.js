@@ -7,10 +7,10 @@ const experiences = [
     period: "Jun 2023 – Present",
     stack: ["Python", "Flask", "FastAPI", "React", "PostgreSQL"],
     bullets: [
-      "Built and supported SaaS products used by ~140 users — onboarding, bug reports, and ongoing product issues.",
-      "Diagnosed and resolved issues across authentication, payments, file processing, and API-driven workflows (Auth0, Stripe, AWS).",
-      "Reproduced bugs and investigated issues using API responses, logs, and database checks.",
-      "Wrote documentation and improved workflows to reduce repeat support questions.",
+      "Built AutoSortPro, an AI-powered file organization application using Electron, FastAPI, React, and PostgreSQL.",
+      "Integrated Auth0, Stripe, OpenAI, and AWS into product workflows for authentication, payments, file processing, and AI features.",
+      "Supported roughly 140 users across self-built applications and shipped fixes based on reported issues.",
+      "Investigated bugs using API responses, logs, and database checks; documented solutions and workflows.",
     ],
   },
   {
@@ -19,10 +19,10 @@ const experiences = [
     period: "2022 – Present",
     stack: ["Magento 2", "Python", "Flask", "React", "PostgreSQL"],
     bullets: [
-      "Hands-on support for fulfillment, receiving, inventory, and catalog workflows in a Magento environment processing 75+ daily orders.",
-      "Built M2 InstaCount — a Python, Flask, React, and PostgreSQL inventory system integrated with Magento 2 APIs.",
-      "Supported Amazon and eBay marketplace listing work, Magento admin tasks, and storefront HTML/CSS updates tied to day-to-day operations.",
-      "Troubleshot inventory discrepancies, SKU mismatches, and workflow issues in day-to-day operations.",
+      "Built M2 InstaCount, a Python, Flask, React, and PostgreSQL inventory and receiving system integrated with Magento 2 APIs.",
+      "Designed around barcode workflows, inventory accuracy, and the needs of a business processing 75+ daily orders.",
+      "Investigated SKU mismatches and inventory discrepancies in day-to-day operations.",
+      "Maintained Magento admin and storefront updates alongside Amazon and eBay marketplace work.",
     ],
   },
   {

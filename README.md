@@ -1,77 +1,38 @@
-# Collin Burleigh — Portfolio
+# Collin Burleigh - Software Engineering Portfolio
 
-Personal portfolio for Collin Burleigh, a Technical Support Engineer focused on SaaS, ecommerce, and automation systems.
+The source for [collinburleigh.com](https://collinburleigh.com), my portfolio of full-stack applications, ecommerce tooling, and a Python prototype.
 
-**Live site:** [collinburleigh.com](https://collinburleigh.com)
+## Featured work
 
-![Collin Burleigh portfolio preview](Images/portfoliov2.1-img.png)
+| Project | What I built | Stack |
+| --- | --- | --- |
+| [AutoSortPro](https://autosortpro.com) | AI-powered file organization application for organizing, tagging, and summarizing files; product workflows and integrations for authentication, payments, and AI features | Electron, React, FastAPI, PostgreSQL, Auth0, Stripe, OpenAI, AWS |
+| [M2 InstaCount](https://m2instacount.com) | Inventory and receiving tool for Magento 2 operations, including barcode workflows and inventory accuracy checks | Python, Flask, React, PostgreSQL, Magento 2 API |
+| [OpenHome](https://www.loom.com/share/a29cbce183324c6fa0dc31b8ea0389e8) | Python application for an AI-powered smart-home OS prototype presented to 100+ potential investors in 2024 | Python, AI, voice |
 
-## Overview
+AutoSortPro and M2 InstaCount have served roughly 140 users across both applications. I have also supported users, investigated reported issues, and shipped fixes after launch. The professional roles on the site and résumé retain their original titles.
 
-This frontend portfolio presents my professional experience, technical toolkit, selected work, and resume. It focuses on the intersection of application support and software development: reproducing bugs, investigating API and database behavior, supporting users, documenting solutions, and improving production workflows.
+The production applications above are maintained separately; this repository contains the portfolio frontend.
 
-## Selected work
+## Portfolio stack
 
-### AutoSortPro
-
-An AI-powered file organization application that organizes, tags, and summarizes files. I built product workflows, supported users directly, investigated reported issues, and shipped fixes across Electron, FastAPI, React, PostgreSQL, Auth0, Stripe, OpenAI, and AWS.
-
-- [View the AutoSortPro case study](https://autosortpro.com)
-- [Watch the product demo](https://www.youtube.com/watch?v=VLEiTljMmFk)
-
-### M2 InstaCount
-
-An inventory and receiving tool for Magento 2 operations, including barcode workflows and inventory-accuracy checks. I combine product development with hands-on operational support in a live ecommerce environment.
-
-- [Visit M2 InstaCount](https://m2instacount.com)
-- [Watch the product demo](https://www.youtube.com/watch?v=m02yoiAsPDY)
-
-### OpenHome
-
-A Python prototype for an AI-powered smart-home operating system. I delivered the grant-funded application as part of a prototype presented to more than 100 potential investors in 2024.
-
-- [Watch the prototype demo](https://www.loom.com/share/a29cbce183324c6fa0dc31b8ea0389e8)
-
-## Portfolio features
-
-- Responsive home, experience, project, and resume views
-- Professional experience timeline and technical-tool summaries
-- Project cards with product links and video demonstrations
-- Downloadable resume
-- Custom social-sharing image, favicon, and mobile styling
-
-## Built with
-
-- React
-- React Router
-- React Bootstrap and Bootstrap
-- CSS
-- React Icons and tsParticles
-- Vercel for hosting
-
-This repository contains the portfolio frontend. The production applications featured above are maintained separately.
+React 17, React Router, React Bootstrap, CSS, React Icons, tsParticles, and react-pdf. The site is hosted on Vercel.
 
 ## Run locally
 
-Requirements: a current Node.js LTS release and npm.
+Use a current Node.js LTS release and npm:
 
 ```bash
-git clone https://github.com/CBurl1/portfolio.git
-cd portfolio
 npm ci
 npm start
 ```
 
-The development server opens at `http://localhost:3000`.
+Create a production build with `npm run build`. Run the test suite with `npm test -- --watch=false`.
 
-To create a production build:
-
-```bash
-npm run build
-```
+The résumé PDF is generated from `scripts/build-resume.py` using ReportLab. The social sharing image is generated from `public/og-image.svg` with `npm run build:og`.
 
 ## Contact
 
-- [Portfolio](https://collinburleigh.com)
+- [Website](https://collinburleigh.com)
 - [LinkedIn](https://www.linkedin.com/in/burleighcollin)
 - [GitHub](https://github.com/CBurl1)

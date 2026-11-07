@@ -9,7 +9,6 @@ import { CgFileDocument } from "react-icons/cg";
 import Particle from "../Particle";
 import HeroVisual from "./HeroVisual";
 import Home2 from "./Home2";
-import Type from "./Type";
 
 function Home() {
   return (
@@ -20,28 +19,23 @@ function Home() {
           <Row className="align-items-center">
             <Col md={7} className="home-header">
               <p className="hero-kicker">
-                Technical support · SaaS · automation
+                Collin Burleigh · Software Engineer
               </p>
 
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hey There!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
-                </span>
-              </h1>
-
               <h1 className="heading-name">
-                I'm <strong className="main-name">Collin Burleigh</strong>
+                I build <strong className="main-name">useful software</strong> from idea to production.
               </h1>
 
-              <div style={{ padding: "32px 0 16px 50px", textAlign: "left" }}>
-                <Type />
-              </div>
+              <p className="hero-summary">
+                Full-stack applications in React, Python, and PostgreSQL. I built
+                AutoSortPro and M2 InstaCount, connecting product workflows with
+                APIs, data, and the people who use them.
+              </p>
 
               <div className="home-cta-row">
                 <Link to="/project" className="btn-gradient">
                   <AiOutlineFundProjectionScreen />
-                  View Projects
+                  Explore Projects
                   <AiOutlineArrowRight />
                 </Link>
                 <Link to="/resume" className="btn-ghost">
