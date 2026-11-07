@@ -178,12 +178,18 @@ p{line-height:1.75}
 /* Responsive layout */
 @media(max-width:991px){
  .home-section{padding:140px 0 82px}
- .home-section .row{--bs-gutter-x:1.7rem}
  .heading-name{font-size:clamp(2.7rem,5vw,4rem)}
  .hero-summary{font-size:.93rem}
  .hero-visual__status{display:none}
  .project-card-view .card-body{padding:1.1rem!important}
  .project-actions{flex-direction:column;align-items:stretch}
+}
+@media(max-width:1199px){
+ .home-section .row,.home-about-section .row{--bs-gutter-x:1.5rem}
+}
+@media(min-width:768px) and (max-width:991px){
+ .project-card{width:50%!important}
+ .skill-list{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:767px){
  .navbar.fixed-top,.sticky.fixed-top{padding:.65rem 0!important}

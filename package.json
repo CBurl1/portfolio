@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:og": "node scripts/build-og-image.js"
+    "build:og": "node scripts/build-og-image.js",
+    "build:icons": "node scripts/build-icons.js"
   },
   "eslintConfig": {
     "extends": [
