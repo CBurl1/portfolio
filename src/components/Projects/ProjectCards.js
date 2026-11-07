@@ -17,13 +17,12 @@ function ProjectCards(props) {
 
   return (
     <Card className="project-card-view" style={{ width: "100%" }}>
-      <div className="project-card-imagewrap">
-        <div className={`project-card-visual project-card-visual--${props.visualKind || "home"}`} aria-hidden="true">
-          <VisualIcon />
-          <span>{props.visualLabel || props.title}</span>
+      <div className={`project-card-visual project-card-visual--${props.visualKind || "home"}`}>
+        <span className="project-card-visual__icon" aria-hidden="true"><VisualIcon /></span>
+        <div>
+          <h2 className="project-card-visual__title">{props.visualLabel || props.title}</h2>
           <small>{props.visualSubtitle}</small>
         </div>
-        <span className="project-card-image-shade" aria-hidden="true" />
       </div>
 
       <Card.Body
@@ -35,19 +34,6 @@ function ProjectCards(props) {
         }}
       >
         <div className="project-card-category">{props.category}</div>
-        <Card.Title
-          style={{
-            marginBottom: "0.75rem",
-            fontSize: "1.15rem",
-            lineHeight: "1.3",
-            minHeight: "2.6rem",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          {props.title}
-        </Card.Title>
-
         <Card.Text
           style={{
             textAlign: "left",

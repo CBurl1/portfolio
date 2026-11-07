@@ -2253,3 +2253,181 @@ a:focus-visible,
     display: none;
   }
 }
+
+/* Compact project identity and a usable résumé preview */
+.project-card-visual {
+  height: 128px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.project-card-visual__icon {
+  display: inline-flex;
+  flex: 0 0 54px;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.project-card-visual svg {
+  font-size: 1.9rem;
+}
+
+.project-card-visual__title {
+  margin: 0 0 5px;
+  font-size: 1.38rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.project-card-visual small {
+  display: block;
+  line-height: 1.4;
+}
+
+.project-card-category {
+  margin-bottom: 0.8rem;
+}
+
+.resume {
+  padding-top: 12px;
+  padding-bottom: 26px;
+}
+
+.resume-frame {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.resume-preview-label {
+  margin: 0 0 12px;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.11em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tech-icons {
+  background: var(--bg-card) !important;
+  box-shadow: var(--shadow-card) !important;
+  backdrop-filter: none;
+}
+
+.tech-icons:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-card-hover) !important;
+}
+
+@media (min-width: 768px) {
+  .project-section {
+    padding-top: 116px !important;
+  }
+
+  .project-section .page-header {
+    margin-bottom: 36px;
+  }
+
+  .metric-strip {
+    padding: 16px 24px;
+  }
+
+  .project-evidence-note {
+    margin-bottom: 18px;
+  }
+
+  .project-card {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-card-visual {
+    height: 108px;
+    gap: 13px;
+    padding: 16px 18px;
+  }
+
+  .project-card-visual__icon {
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+    border-radius: 11px;
+  }
+
+  .project-card-visual svg {
+    font-size: 1.6rem;
+  }
+
+  .project-card-visual__title {
+    font-size: 1.2rem;
+  }
+
+  .project-card-visual small {
+    font-size: 0.66rem;
+  }
+
+  .resume {
+    padding: 0 0 16px;
+  }
+
+  .resume-frame {
+    display: flex;
+    padding: 10px;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .resume-section .react-pdf__Page__canvas {
+    box-shadow: none;
+  }
+
+  .resume-section .react-pdf__Page__annotations {
+    display: none;
+  }
+
+  .timeline {
+    padding-top: 0;
+  }
+
+  .timeline::before,
+  .timeline__dot {
+    display: none;
+  }
+
+  .timeline__item {
+    padding-left: 0;
+    margin-bottom: 14px;
+  }
+
+  .timeline__card {
+    padding: 18px;
+  }
+
+  .tech-icons {
+    flex: 0 0 calc(50% - 12px);
+    width: calc(50% - 12px) !important;
+    min-height: 102px;
+    margin: 6px !important;
+    padding: 12px !important;
+    font-size: 2.35em !important;
+  }
+
+  .about-section .project-heading {
+    font-size: clamp(1.85rem, 8vw, 2.2rem) !important;
+    line-height: 1.2;
+  }
+}
