@@ -51,7 +51,6 @@ function Home2() {
                 <div className="stat-label">One Magento year-end count using M2 InstaCount</div>
               </div>
             </div>
-            <p className="home-stats-source">Count result from <a href="https://m2instacount.com/magento-inventory-case-study/" target="_blank" rel="noopener noreferrer">one production operation</a>; results vary by workflow.</p>
           </Col>
         </Row>
 

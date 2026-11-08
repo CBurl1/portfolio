@@ -81,7 +81,6 @@ p{line-height:1.75}
 .stat-card:first-child{padding-left:0;border-right:1px solid var(--line)}
 .stat-value{font:700 2rem/1.1 "Space Grotesk",sans-serif;letter-spacing:-.04em;color:var(--ink)}
 .stat-label{font-size:.78rem;color:var(--muted);margin-top:.42rem}
-.home-stats-source{margin:.8rem 0 0;color:#88959c;font-size:.69rem}
 .home-about-social{margin-top:4.6rem;padding-top:2.2rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:flex-start;gap:1.4rem}
 .home-about-social h2{font-size:1.55rem;font-weight:700;margin:0}
 .home-about-social-links,.footer-icons{display:flex;gap:.55rem;list-style:none;margin:0;padding:0}
