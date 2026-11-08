@@ -66,7 +66,7 @@ function About() {
           <div style={{ textAlign: "center" }}>
             <span className="section-eyebrow">04 · Outside of work</span>
           </div>
-          <h2 className="project-heading">Time <strong className="purple">outdoors</strong></h2>
+          <h2 className="project-heading">A little more <strong className="purple">about me</strong></h2>
           <OutsideWork />
         </section>
 
