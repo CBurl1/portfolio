@@ -31,10 +31,6 @@ function Projects() {
           </div>
         </div>
 
-        <p className="project-evidence-note">
-          AutoSortPro usage comes from its <a href="https://autosortpro.com/#impact" target="_blank" rel="noopener noreferrer">product case study</a>. The count comparison comes from <a href="https://m2instacount.com/magento-inventory-case-study/" target="_blank" rel="noopener noreferrer">one Magento operation</a>; it is not a guaranteed outcome.
-        </p>
-
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col
             md={4}
