@@ -153,8 +153,11 @@ p{line-height:1.75}
 .outside-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.2rem}
 .outside-work-card{min-width:0;padding:1.5rem;background:#fff;border:1px solid var(--line);border-radius:12px}
 .outside-work-card--outdoors{background:#edf5f1;border-color:#d5e6df}
-.outside-work-card__icon{width:43px;height:43px;display:flex;align-items:center;justify-content:center;border-radius:9px;background:#f0f5fb;color:var(--blue);font-size:1.3rem;margin-bottom:1.1rem}
-.outside-work-card--outdoors .outside-work-card__icon{background:#fff;color:var(--green)}
+.outside-work-card--travel{background:#edf3fb;border-color:#d8e4f4}
+.outside-work-card--baseball{background:#f6f2e9;border-color:#e8dfcf}
+.outside-work-card__icon{width:43px;height:43px;display:flex;align-items:center;justify-content:center;border-radius:9px;background:#fff;color:var(--blue);font-size:1.3rem;margin-bottom:1.1rem}
+.outside-work-card--outdoors .outside-work-card__icon{color:var(--green)}
+.outside-work-card--baseball .outside-work-card__icon{color:#82633c}
 .outside-work-card h3{margin:0 0 .35rem;color:var(--ink);font-size:1.17rem;font-weight:700}
 .outside-work-card p{margin:0;color:#526372;font-size:.84rem;line-height:1.6}
 .outside-work-activities{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:1.15rem 0 0}
