@@ -150,9 +150,15 @@ p{line-height:1.75}
 .skill-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.45rem}
 .skill-item{display:flex;align-items:center;gap:.55rem;min-width:0;min-height:43px;padding:.55rem .63rem;border:1px solid #e4ebec;border-radius:7px;background:#f8faf9;color:#4c5e6b;font-size:.76rem;font-weight:600;white-space:nowrap}
 .skill-item svg{flex:none;color:var(--blue);font-size:1.12rem}
-.outdoors-feature{display:flex;align-items:center;gap:1.1rem;max-width:720px;padding:1.35rem 1.5rem;background:#eaf4f0;border:1px solid #d5e6df;border-radius:11px}
-.outdoors-feature__icon{width:45px;height:45px;flex:none;display:flex;align-items:center;justify-content:center;border-radius:9px;background:#fff;color:var(--green);font-size:1.45rem}
-.outdoors-feature p{margin:0;color:#38594f;font-size:.92rem;line-height:1.65}
+.outside-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.2rem}
+.outside-work-card{min-width:0;padding:1.5rem;background:#fff;border:1px solid var(--line);border-radius:12px}
+.outside-work-card--outdoors{background:#edf5f1;border-color:#d5e6df}
+.outside-work-card__icon{width:43px;height:43px;display:flex;align-items:center;justify-content:center;border-radius:9px;background:#f0f5fb;color:var(--blue);font-size:1.3rem;margin-bottom:1.1rem}
+.outside-work-card--outdoors .outside-work-card__icon{background:#fff;color:var(--green)}
+.outside-work-card h3{margin:0 0 .35rem;color:var(--ink);font-size:1.17rem;font-weight:700}
+.outside-work-card p{margin:0;color:#526372;font-size:.84rem;line-height:1.6}
+.outside-work-activities{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:1.15rem 0 0}
+.outside-work-activities li{padding:.38rem .58rem;background:#fff;border:1px solid #d5e6df;border-radius:6px;color:#38594f;font-size:.7rem;font-weight:600;line-height:1.2}
 .github-frame{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.3rem;overflow:auto}
 .github-calendar{color:var(--muted);font-size:.75rem}
 
@@ -183,6 +189,8 @@ p{line-height:1.75}
  .hero-visual__status{display:none}
  .project-card-view .card-body{padding:1.1rem!important}
  .project-actions{flex-direction:column;align-items:stretch}
+ .outside-work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .outside-work-card--outdoors{grid-column:1/-1}
 }
 @media(max-width:1199px){
  .home-section .row,.home-about-section .row{--bs-gutter-x:1.5rem}
@@ -216,6 +224,8 @@ p{line-height:1.75}
  .project-card-view{max-width:650px;margin:0 auto}
  .project-actions{flex-direction:row}
  .skillset-grid{grid-template-columns:1fr}
+ .outside-work-grid{grid-template-columns:1fr;max-width:650px}
+ .outside-work-card--outdoors{grid-column:auto}
  .footer .row{gap:.7rem}
  .footer-body{justify-content:flex-start}
 }
@@ -258,8 +268,7 @@ p{line-height:1.75}
  .skill-panel .project-heading{font-size:1.42rem}
  .skill-panel>p{min-height:0;margin-bottom:1rem}
  .skill-list{grid-template-columns:repeat(2,minmax(0,1fr))}
- .outdoors-feature{padding:1rem;gap:.8rem}
- .outdoors-feature p{font-size:.83rem}
+ .outside-work-card{padding:1.2rem}
  .about-card{padding:1.15rem;font-size:.82rem}
  .timeline{padding-left:1.2rem}
  .timeline__dot{left:-1.61rem}
