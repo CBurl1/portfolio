@@ -15,12 +15,12 @@ function OutsideWork() {
           {outdoorActivities.map((activity) => <li key={activity}>{activity}</li>)}
         </ul>
       </div>
-      <div className="outside-work-card">
+      <div className="outside-work-card outside-work-card--travel">
         <span className="outside-work-card__icon" aria-hidden="true"><FaGlobeAmericas /></span>
         <h3>Travel &amp; Spanish</h3>
         <p>I enjoy traveling and have been learning to speak Spanish.</p>
       </div>
-      <div className="outside-work-card">
+      <div className="outside-work-card outside-work-card--baseball">
         <span className="outside-work-card__icon" aria-hidden="true"><FaBaseballBall /></span>
         <h3>Baseball &amp; coaching</h3>
         <p>I play baseball and am an assistant coach for a high school team.</p>
