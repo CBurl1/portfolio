@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate the one-page software engineering resume used by the site."""
 
+import argparse
 from pathlib import Path
 
 from reportlab.lib import colors
@@ -66,11 +67,11 @@ CONTACT = ParagraphStyle(
     textColor=MUTED,
     alignment=TA_LEFT,
 )
-BODY = style("body", 9.2, 12.4)
-SMALL = style("small", 8.85, 11.7)
-SECTION = style("section", 10.2, 13, bold=True, color=ACCENT)
-ITEM = style("item", 9.6, 12, bold=True)
-DETAIL = style("detail", 8.7, 11.2, color=MUTED)
+BODY = style("body", 10, 13.7)
+SMALL = style("small", 9.65, 13)
+SECTION = style("section", 10.5, 13.6, bold=True, color=ACCENT)
+ITEM = style("item", 10.1, 13.2, bold=True)
+DETAIL = style("detail", 9.2, 12.1, color=MUTED)
 
 
 def section(title):
@@ -86,13 +87,13 @@ def section(title):
             ]
         )
     )
-    return [Spacer(1, 12), line, Spacer(1, 6)]
+    return [Spacer(1, 15), line, Spacer(1, 8)]
 
 
 def entry(title, detail, bullets):
     rows = [Paragraph(title, ITEM), Paragraph(detail, DETAIL)]
-    rows += [Paragraph("&#8226; " + bullet, SMALL) for bullet in bullets]
-    rows.append(Spacer(1, 7))
+    rows += [Paragraph("- " + bullet, SMALL) for bullet in bullets]
+    rows.append(Spacer(1, 11))
     return KeepTogether(rows)
 
 
@@ -112,9 +113,11 @@ def draw_page(canvas, doc):
     canvas.restoreState()
 
 
-def main():
+def main(output=OUTPUT):
+    output = Path(output)
+    output.parent.mkdir(parents=True, exist_ok=True)
     doc = BaseDocTemplate(
-        str(OUTPUT),
+        str(output),
         pagesize=letter,
         leftMargin=38,
         rightMargin=38,
@@ -128,7 +131,7 @@ def main():
 
     story = [
         Paragraph("Collin Burleigh", NAME),
-        Paragraph("SOFTWARE ENGINEER  |  PYTHON &amp; FULL-STACK APPLICATIONS", HEADLINE),
+        Paragraph("SOFTWARE ENGINEER  |  PYTHON BACKEND &amp; FULL-STACK", HEADLINE),
         Spacer(1, 3),
         Paragraph(
             "New Hampshire, USA  |  603-617-9989  |  "
@@ -142,18 +145,19 @@ def main():
     story += section("Profile")
     story.append(
         Paragraph(
-            "Software developer who has built and supported full-stack applications for SaaS and "
-            "ecommerce workflows. Shipped AutoSortPro and M2 InstaCount using Python, "
-            "Flask/FastAPI, React, and PostgreSQL. Work with users after launch to investigate issues "
-            "and improve the product.",
+            "Software engineer focused on Python backend development for file-management and "
+            "ecommerce applications. Built AutoSortPro with FastAPI and M2 InstaCount with "
+            "Flask, using PostgreSQL and React across both. Improves products after release "
+            "through debugging and user feedback.",
             BODY,
         )
     )
     story += section("Technical skills")
     skills = [
-        ("Languages &amp; frameworks", "Python, JavaScript, SQL, React, Flask, FastAPI, Electron"),
-        ("Data &amp; integrations", "PostgreSQL, SQLite, Magento 2 API, Auth0, Stripe API, OpenAI API, AWS (IAM, S3, SES, Rekognition)"),
-        ("Tools", "Git, Postman, Jira, PyTest, Jest, Tailwind"),
+        ("Languages", "Python, JavaScript, SQL"),
+        ("Backend &amp; data", "FastAPI, Flask, PostgreSQL, SQLite, REST APIs, pytest"),
+        ("Frontend &amp; desktop", "React, Electron, HTML/CSS, Tailwind, Jest"),
+        ("Integrations &amp; tools", "Magento 2 API, Veeqo API, Auth0, Stripe, OpenAI, AWS, Git, Postman, Jira"),
     ]
     table = Table(
         [[Paragraph(label, SMALL), Paragraph(value, SMALL)] for label, value in skills],
@@ -171,69 +175,46 @@ def main():
         )
     )
     story.append(table)
-    story += section("Selected engineering work")
+    story += section("Engineering experience")
     story.append(
         entry(
-            "AutoSortPro",
-            "Python, FastAPI, Electron, React, PostgreSQL, Auth0, Stripe, OpenAI, AWS",
+            "Freelance Software Developer  |  Jun 2023 - Present",
+            "AutoSortPro | Python, FastAPI, Electron, React, PostgreSQL",
             [
-                "Built an AI-powered file organization application that organizes, tags, and summarizes files.",
-                "Reached 132 active users and organized 12.5K+ files; implemented authentication, payments, AI features, and file processing.",
-            ],
-        )
-    )
-    story.append(
-        entry(
-            "M2 InstaCount",
-            "Python, Flask, React, PostgreSQL, Magento 2 API",
-            [
-                "Built scanner-based Magento product lookup, receiving with CSV export, and Veeqo batch picking.",
-                "In one operation, a roughly 4,500-SKU year-end count took 22 hours versus 42 before; four timed picks averaged 22% less time.",
-            ],
-        )
-    )
-    story.append(
-        entry(
-            "OpenHome",
-            "Python | Grant-funded prototype, Jan 2024 - Apr 2024",
-            [
-                "Developed a Python application for an AI-powered smart-home OS prototype presented to 100+ potential investors.",
-            ],
-        )
-    )
-    story += section("Professional experience")
-    story.append(
-        entry(
-            "Freelance Software Developer  |  Remote  |  Jun 2023 - Present",
-            "",
-            [
-                "Built and supported full-stack applications; shipped fixes based on reported user issues.",
-                "Investigated authentication, payments, file-processing, and API issues using logs, API responses, and database checks.",
+                "Built FastAPI and PostgreSQL-backed workflows that process images and documents into editable titles, summaries, tags, and searchable metadata.",
+                "Implemented file validation, batch processing, OCR, and export of original files with metadata.",
+                "Integrated Auth0, Stripe, OpenAI, and AWS into account, billing, and file-processing workflows.",
+                "Investigated user-reported issues using logs, API responses, and database checks; shipped fixes. AutoSortPro reached 132 active users and organized 12.5K+ files.",
             ],
         )
     )
     story.append(
         entry(
             "Technical Systems Engineer, Ecommerce Operations  |  2022 - Present",
-            "",
+            "M2 InstaCount | Python, Flask, React, PostgreSQL, Magento 2 and Veeqo APIs",
             [
-                "Built M2 InstaCount around inventory and receiving workflows in a business processing 75+ daily orders.",
-                "Troubleshot SKU mismatches and inventory discrepancies; maintained Magento admin and storefront updates.",
+                "Built Flask and PostgreSQL-backed barcode lookup, discrepancy review, receiving with CSV export, and Veeqo-linked mobile batch picking.",
+                "A roughly 4,500-SKU year-end count at one store took 22 hours with the new workflow, down from 42 hours with the prior process.",
+                "Supported Magento inventory and catalog workflows for a business processing 75+ daily orders; investigated SKU and quantity discrepancies.",
             ],
         )
     )
     story.append(
         entry(
             "Application Developer, Contract  |  OpenHome  |  Jan 2024 - Apr 2024",
-            "",
-            ["Built the Python application used in the AI smart-home OS prototype."],
+            "Python | Grant-funded prototype",
+            [
+                "Developed a Python application for an AI-powered smart-home OS prototype presented to 100+ potential investors.",
+            ],
         )
     )
     story += section("Education")
-    story.append(Paragraph("<b>Flatiron School</b>  |  Software Engineering", BODY))
+    story.append(Paragraph("<b>Flatiron School</b>  |  Software Engineering, 2023", BODY))
     doc.build(story)
-    print(OUTPUT)
+    print(output)
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=OUTPUT)
+    main(parser.parse_args().output)
