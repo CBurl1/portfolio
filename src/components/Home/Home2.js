@@ -30,7 +30,7 @@ function Home2() {
             </p>
             <p>
               Building for users has kept me close to the product after release.
-              AutoSortPro's <a href="https://autosortpro.com/#impact" target="_blank" rel="noopener noreferrer">public case study</a> records <span className="purple">132 active users</span> and more than <span className="purple">12,500 files organized</span>. I've investigated issues and shipped fixes informed by user feedback.
+              I've investigated issues and shipped fixes informed by user feedback.
             </p>
             </div>
           </Col>
