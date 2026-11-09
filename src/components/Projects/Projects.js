@@ -8,28 +8,10 @@ function Projects() {
     <Container fluid className="project-section">
       <Container>
         <PageHeader
-          eyebrow="01 · Selected Work"
-          title="Selected software"
+          title="Selected"
           accent="projects"
-          subtitle="Selected applications and client work, from Python inventory systems to a field operations platform."
+          subtitle="Applications and client work built around practical problems."
         />
-
-        <div className="metric-strip">
-          <div className="metric-strip__item">
-            <span className="metric-strip__value">12.5K+</span>
-            <span className="metric-strip__label">Files organized with AutoSortPro</span>
-          </div>
-          <div className="metric-strip__divider" aria-hidden="true" />
-          <div className="metric-strip__item">
-            <span className="metric-strip__value">132</span>
-            <span className="metric-strip__label">AutoSortPro users during operation</span>
-          </div>
-          <div className="metric-strip__divider" aria-hidden="true" />
-          <div className="metric-strip__item">
-            <span className="metric-strip__value">42 → 22h</span>
-            <span className="metric-strip__label">One Magento year-end count</span>
-          </div>
-        </div>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card" style={{ display: "flex", alignItems: "stretch" }}>

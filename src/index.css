@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap");
-:root{color-scheme:light;--canvas:#f6f8f7;--paper:#ffffff;--ink:#142331;--muted:#5f6d79;--line:#dce4e4;--blue:#2458b8;--blue-dark:#17458e;--soft-blue:#eaf1fc;--green:#207461;--shadow:0 16px 48px rgba(21,46,65,.07)}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+:root{color-scheme:light;--canvas:#f4f3ef;--paper:#fff;--ink:#1d2b32;--muted:#53636b;--line:#d8ddda;--blue:#205478;--blue-dark:#153d5b;--soft-blue:#e9f0f3;--green:#207461;--shadow:0 14px 36px rgba(24,40,46,.08)}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 html{background:var(--canvas);scroll-behavior:smooth}
-body{font-family:"Inter",system-ui,sans-serif!important;color:var(--ink);background:var(--canvas);-webkit-font-smoothing:antialiased;min-width:320px}
+body{font-family:"Inter",system-ui,sans-serif!important;color:var(--ink);background:var(--canvas) url('./Assets/paper-grain.svg') repeat;-webkit-font-smoothing:antialiased;min-width:320px}
 button,input,select,textarea{font:inherit;color-scheme:light}
-::selection{background:#cfe0fa;color:var(--ink)}
+::selection{background:#d7e7ee;color:var(--ink)}

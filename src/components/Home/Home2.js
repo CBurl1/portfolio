@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import AboutVisual from "./AboutVisual";
 import "./Home.css";
 
 function Home2() {
@@ -11,31 +10,23 @@ function Home2() {
       <div className="horizontal-line"></div>
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
+          <Col lg={9} className="home-about-description">
             <h2 className="home-about-heading">
               Engineering <span className="purple">in practice</span>
             </h2>
             <div className="home-about-body">
-            <p>
-              I build software for real workflows, from a{" "}
-              <span className="purple">Magento 2 inventory tool</span> to a{" "}
-              <span className="purple">field operations app</span>. My work spans
-              product design, application code, integrations, and the fixes
-              needed after launch.
-            </p>
-            <p>
-              I work across <span className="purple">Python, Flask, FastAPI,
-              React, Next.js, TypeScript, and PostgreSQL</span>, with integrations
-              including Magento 2, Veeqo, Supabase, OpenAI, and AWS.
-            </p>
-            <p>
-              Building for users has kept me close to the product after release.
-              I've investigated issues and shipped fixes informed by user feedback.
-            </p>
+              <p>
+                I moved from ecommerce operations into software development in
+                2023. Since then I've built M2 InstaCount for inventory and
+                picking, AutoSortPro for file organization, and a field
+                operations app for Sentinel Insulation.
+              </p>
+              <p>
+                I work mainly with Python, Flask, FastAPI, React, Next.js,
+                TypeScript, and PostgreSQL. I still maintain M2 InstaCount and
+                improve software through feedback from the people using it.
+              </p>
             </div>
-          </Col>
-          <Col md={4} className="myAvtar">
-            <AboutVisual />
           </Col>
         </Row>
 
@@ -57,7 +48,7 @@ function Home2() {
         <Row>
           <Col md={12} className="home-about-social">
             <h2>
-              Let's <span className="purple">Connect:</span>
+              Let's <span className="purple">connect</span>
             </h2>
             <ul className="home-about-social-links">
               <li className="social-icons">

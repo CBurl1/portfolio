@@ -21,7 +21,7 @@ function Home() {
               </p>
 
               <h1 className="heading-name">
-                I build <strong className="main-name">useful software</strong> from idea to production.
+                I build <strong className="main-name">useful software</strong> from idea to production
               </h1>
 
               <p className="hero-summary">

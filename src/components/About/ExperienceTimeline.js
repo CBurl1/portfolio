@@ -48,22 +48,15 @@ function ExperienceTimeline() {
     <div className="timeline">
       {experiences.map((exp) => (
         <div className="timeline__item" key={`${exp.org}-${exp.period}`}>
-          <span className="timeline__dot" />
+          <span className="timeline__period">{exp.period}</span>
           <div className="timeline__card">
             <div className="timeline__head">
-              <span className="timeline__period">{exp.period}</span>
               <h3 className="timeline__role">{exp.role}</h3>
               <span className="timeline__org">{exp.org}</span>
             </div>
 
             {exp.stack && (
-              <div className="timeline__stack">
-                {exp.stack.map((t) => (
-                  <span className="timeline__tag" key={t}>
-                    {t}
-                  </span>
-                ))}
-              </div>
+              <p className="timeline__stack">{exp.stack.join(" · ")}</p>
             )}
 
             {exp.bullets && (

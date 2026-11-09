@@ -3,24 +3,11 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsPlayCircle } from "react-icons/bs";
-import { AiOutlineHome } from "react-icons/ai";
-import { FiFolder, FiPackage, FiCamera, FiClipboard } from "react-icons/fi";
-
-const visualIcons = {
-  files: FiFolder,
-  inventory: FiPackage,
-  field: FiClipboard,
-  photography: FiCamera,
-  home: AiOutlineHome,
-};
 
 function ProjectCards(props) {
-  const VisualIcon = visualIcons[props.visualKind] || AiOutlineHome;
-
   return (
     <Card className="project-card-view" style={{ width: "100%" }}>
       <div className={`project-card-visual project-card-visual--${props.visualKind || "home"}`}>
-        <span className="project-card-visual__icon" aria-hidden="true"><VisualIcon /></span>
         <div>
           <h2 className="project-card-visual__title">{props.visualLabel || props.title}</h2>
           <small>{props.visualSubtitle}</small>
@@ -49,13 +36,7 @@ function ProjectCards(props) {
         </Card.Text>
 
         {Array.isArray(props.tags) && props.tags.length > 0 && (
-          <div className="project-tags">
-            {props.tags.map((t) => (
-              <span className="project-tag" key={t}>
-                {t}
-              </span>
-            ))}
-          </div>
+          <p className="project-stack">{props.tags.join(" · ")}</p>
         )}
 
         <div className="project-actions">
