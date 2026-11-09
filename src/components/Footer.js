@@ -41,7 +41,7 @@ function Footer() {
               </li>
               <li className="social-icons">
                 <a
-                  href="mailto:me@collinburleigh.com"
+                  href="mailto:collin.s.burleigh@gmail.com"
                   className="icon-colour footer-icon"
                   aria-label="Email"
                 >
