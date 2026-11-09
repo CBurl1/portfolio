@@ -34,4 +34,4 @@ The résumé PDF is generated from `scripts/build-resume.py` using ReportLab. Th
 
 - [Website](https://www.collinburleigh.com)
 - [LinkedIn](https://www.linkedin.com/in/burleighcollin/)
-- [Email](mailto:collin.s.burleigh@gmail.com)
+- [Email](mailto:me@collinburleigh.com)

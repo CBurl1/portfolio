@@ -142,7 +142,7 @@ def main(output=OUTPUT):
         Spacer(1, 3),
         Paragraph(
             "New Hampshire, USA  |  603-617-9989  |  "
-            "<link href='mailto:collin.s.burleigh@gmail.com'>collin.s.burleigh@gmail.com</link>"
+            "<link href='mailto:me@collinburleigh.com'>me@collinburleigh.com</link>"
             "<br/><link href='https://collinburleigh.com'>collinburleigh.com</link>  |  "
             "<link href='https://www.linkedin.com/in/burleighcollin'>linkedin.com/in/burleighcollin</link>  |  "
             "<link href='https://github.com/CBurl1'>github.com/CBurl1</link>",
