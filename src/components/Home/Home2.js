@@ -53,7 +53,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="mailto:collin.s.burleigh@gmail.com"
+                  href="mailto:me@collinburleigh.com"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
