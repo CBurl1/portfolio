@@ -5,17 +5,17 @@ const pages = {
   "/": {
     title: "Collin Burleigh | Software Engineer",
     description:
-      "Software engineer building full-stack applications with Python, Flask, FastAPI, React, and PostgreSQL. Explore AutoSortPro, M2 InstaCount, and OpenHome.",
+      "Python backend and full-stack software by Collin Burleigh. Explore M2 InstaCount, Sentinel Insulation, AutoSortPro, and client work.",
   },
   "/about": {
     title: "About | Collin Burleigh",
     description:
-      "Learn about Collin Burleigh's software development experience across Python, SaaS, ecommerce, React, and PostgreSQL.",
+      "Learn about Collin Burleigh's Python and full-stack development work, including inventory software, client platforms, and ecommerce operations.",
   },
   "/project": {
     title: "Projects | Collin Burleigh",
     description:
-      "Explore AutoSortPro, M2 InstaCount, and OpenHome: full-stack software, ecommerce tooling, and a Python prototype built by Collin Burleigh.",
+      "Explore M2 InstaCount, Sentinel Insulation, AutoSortPro, Spencer Burleigh, and OpenHome projects by Collin Burleigh.",
   },
   "/resume": {
     title: "Résumé | Collin Burleigh",

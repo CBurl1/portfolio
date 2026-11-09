@@ -110,6 +110,8 @@ p{line-height:1.75}
 .project-card-visual--files{background:#e8f0fc;color:#164586}
 .project-card-visual--inventory{background:#e8f5f0;color:#155f52}
 .project-card-visual--home{background:#f5f0e6;color:#725932}
+.project-card-visual--field{background:#e8eef8;color:#294f85}
+.project-card-visual--photography{background:#f1eff7;color:#655180}
 .project-card-visual__icon{width:40px;height:40px;border:1px solid currentColor;border-radius:9px;display:flex;align-items:center;justify-content:center;opacity:.82;font-size:1.27rem}
 .project-card-visual__title{font-size:1.45rem;line-height:1.1;font-weight:700;margin:0 0 .2rem}
 .project-card-visual small{font-size:.69rem;font-weight:600;opacity:.72}

@@ -17,16 +17,16 @@ function Home2() {
             </h2>
             <div className="home-about-body">
             <p>
-              I build software for real workflows, from an{" "}
-              <span className="purple">AI-powered file organizer</span> to a{" "}
-              <span className="purple">Magento 2 inventory tool</span>. My work
-              spans product design, application code, integrations, and the
-              fixes needed after launch.
+              I build software for real workflows, from a{" "}
+              <span className="purple">Magento 2 inventory tool</span> to a{" "}
+              <span className="purple">field operations app</span>. My work spans
+              product design, application code, integrations, and the fixes
+              needed after launch.
             </p>
             <p>
               I work across <span className="purple">Python, Flask, FastAPI,
-              React, JavaScript, PostgreSQL, and Electron</span>, with integrations
-              including Auth0, Stripe, OpenAI, Magento 2, and AWS.
+              React, Next.js, TypeScript, and PostgreSQL</span>, with integrations
+              including Magento 2, Veeqo, Supabase, OpenAI, and AWS.
             </p>
             <p>
               Building for users has kept me close to the product after release.

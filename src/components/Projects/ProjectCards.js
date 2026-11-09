@@ -4,11 +4,13 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsPlayCircle } from "react-icons/bs";
 import { AiOutlineHome } from "react-icons/ai";
-import { FiFolder, FiPackage } from "react-icons/fi";
+import { FiFolder, FiPackage, FiCamera, FiClipboard } from "react-icons/fi";
 
 const visualIcons = {
   files: FiFolder,
   inventory: FiPackage,
+  field: FiClipboard,
+  photography: FiCamera,
   home: AiOutlineHome,
 };
 

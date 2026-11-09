@@ -25,9 +25,9 @@ function Home() {
               </h1>
 
               <p className="hero-summary">
-                I build full-stack applications with Python, Flask and FastAPI,
-                React, and PostgreSQL. AutoSortPro and M2 InstaCount connect
-                product workflows with APIs, data, and the people who use them.
+                I build Python backend services and full-stack applications for
+                real workflows. My work includes inventory software, a field
+                operations platform, and client websites.
               </p>
 
               <div className="home-cta-row">

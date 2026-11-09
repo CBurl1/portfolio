@@ -13,9 +13,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const highlights = [
   "Software Engineer",
   "Python · FastAPI · Flask",
-  "React · PostgreSQL",
-  "Electron · Magento 2 API",
-  "Auth0 · Stripe · OpenAI · AWS",
+  "Next.js · React · TypeScript",
+  "PostgreSQL · Supabase",
+  "Magento 2 API · Veeqo API",
 ];
 
 function ResumeNew() {

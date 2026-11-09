@@ -24,6 +24,9 @@ test("presents software engineering work and navigates to projects", () => {
   expect(screen.getByText("12.5K+")).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /Results and methodology/i })).toHaveAttribute("href", "https://m2instacount.com/magento-inventory-case-study/");
   expect(screen.getAllByText("OpenHome").length).toBeGreaterThan(0);
+  expect(screen.getAllByText("Sentinel Insulation").length).toBeGreaterThan(0);
+  expect(screen.getAllByText("Spencer Burleigh").length).toBeGreaterThan(0);
+  expect(screen.getByText(/Supabase Row Level Security and server checks/i)).toBeInTheDocument();
 });
 
 test("selected builds switches between Python and integration details", () => {

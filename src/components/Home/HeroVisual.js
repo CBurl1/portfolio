@@ -5,15 +5,18 @@ const views = [
   { id: "python", label: "Python", lines: [
     { name: "AutoSortPro", detail: "FastAPI · file processing · AI metadata" },
     { name: "M2 InstaCount", detail: "Flask · Magento 2 and Veeqo APIs" },
-    { name: "OpenHome", detail: "Python · smart-home prototype" },
+    { name: "OpenHome", detail: "Python · OpenAI API voice app" },
   ] },
   { id: "react", label: "React", lines: [
+    { name: "Sentinel Insulation", detail: "Next.js · installer and office workflows" },
     { name: "AutoSortPro", detail: "Electron desktop interface" },
     { name: "M2 InstaCount", detail: "Browser-based stockroom workflows" },
   ] },
   { id: "integrations", label: "Integrations", lines: [
-    { name: "AutoSortPro", detail: "Auth0 · Stripe · OpenAI · AWS" },
     { name: "M2 InstaCount", detail: "Magento 2 API · Veeqo API" },
+    { name: "Sentinel Insulation", detail: "Supabase · Vercel" },
+    { name: "Spencer Burleigh", detail: "AWS S3 · Jekyll" },
+    { name: "AutoSortPro", detail: "Auth0 · Stripe · OpenAI · AWS" },
   ] },
 ];
 
@@ -24,8 +27,8 @@ function HeroVisual() {
   return (
     <div className="hero-visual">
       <div className="hero-visual__header">
-        <div><span className="section-eyebrow">SELECTED BUILDS / 01–03</span><h2>Built &amp; shipped<span className="hero-visual__period">.</span></h2></div>
-        <span className="hero-visual__status"><span /> Three projects</span>
+        <div><span className="section-eyebrow">SELECTED BUILDS / 01–05</span><h2>Built &amp; shipped<span className="hero-visual__period">.</span></h2></div>
+        <span className="hero-visual__status"><span /> Five projects</span>
       </div>
       <div className="hero-visual__tabs" role="group" aria-label="Explore my work by technology">
         {views.map((view) => <button type="button" className={`hv-chip${view.id === activeId ? " hv-chip--active" : ""}`} aria-pressed={view.id === activeId} onClick={() => setActiveId(view.id)} key={view.id}>{view.label}</button>)}
