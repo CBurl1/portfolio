@@ -1,18 +1,18 @@
-# Collin Burleigh - Software Engineering Portfolio
+# Collin Burleigh's software engineering portfolio
 
-The source for [collinburleigh.com](https://collinburleigh.com), my portfolio of full-stack applications, ecommerce tooling, and a Python prototype.
+Source for [collinburleigh.com](https://www.collinburleigh.com), a portfolio focused on Python backend and full-stack software. The site includes selected projects, experience, and a [one-page résumé](https://www.collinburleigh.com/resume).
 
 ## Featured work
 
 | Project | What I built | Stack |
 | --- | --- | --- |
-| [AutoSortPro](https://autosortpro.com/#impact) | AI-powered file organization application with searchable metadata and portable exports; its public case study reports 12.5K+ files organized by 132 active users before service shutdown | Electron, React, FastAPI, PostgreSQL, Auth0, Stripe, OpenAI, AWS |
-| [M2 InstaCount](https://m2instacount.com) | Magento 2 barcode lookup, receiving with CSV export, and Veeqo batch picking; [one-operation case study](https://m2instacount.com/magento-inventory-case-study/) reports a roughly 4,500-SKU count taking 22 hours versus 42 before | Python, Flask, React, PostgreSQL, Magento 2 API, Veeqo API |
-| [OpenHome](https://www.loom.com/share/a29cbce183324c6fa0dc31b8ea0389e8) | Python application for an AI-powered smart-home OS prototype presented to 100+ potential investors in 2024 | Python, AI, voice |
+| [Sentinel Insulation](https://sentinelinsulation.com/) | A custom quote tool that grew into a mobile-friendly field operations app for scheduling, installer work tickets, materials, supplier comparison, and job financials. I also rebuilt the WordPress site and manage its SEO. | Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Vercel, WordPress |
+| [M2 InstaCount](https://m2instacount.com/) | Barcode counts, receiving, discrepancy review, and scanner-based Veeqo picking for a Magento business. A roughly 4,500-SKU year-end count took 22 hours, down from 42, in [one operation](https://m2instacount.com/magento-inventory-case-study/). I continue to maintain and extend the app. | Python, Flask, React, PostgreSQL, Magento 2 API, Veeqo API |
+| [AutoSortPro](https://autosortpro.com/#impact) | File organization with searchable metadata, OCR, AI features, and exports. During its operation, 132 active users organized 12.5K+ files. The service has since shut down. | Python, FastAPI, Electron, React, PostgreSQL, Auth0, Stripe, OpenAI, AWS |
+| [Spencer Burleigh](https://spencerburleigh.com/) | Jekyll site redesign and maintenance, image and path fixes, and an S3-backed photo feed. | Jekyll, JavaScript, AWS S3 |
+| [OpenHome](https://www.loom.com/share/a29cbce183324c6fa0dc31b8ea0389e8) | Small therapist-style voice app for an evolving OS. It used the OpenAI API and summarized stored JSON conversations for longer-term context. | Python, OpenAI API |
 
-The portfolio uses product-specific evidence instead of an unsourced combined user count. AutoSortPro's public case study reports 132 active users and 12.5K+ files organized. M2 InstaCount's measured results describe one operation and are not guarantees. I have also supported users, investigated reported issues, and shipped fixes after launch. The professional roles on the site and résumé retain their original titles.
-
-The production applications above are maintained separately; this repository contains the portfolio frontend.
+The production applications and client sites are maintained separately. This repository contains the portfolio frontend and résumé PDF.
 
 ## Portfolio stack
 
@@ -27,12 +27,12 @@ npm ci
 npm start
 ```
 
-Create a production build with `npm run build`. Run the test suite with `npm test -- --watch=false`.
+Create a production build with `npm run build`. Run the test suite with `CI=true npm test -- --watch=false`.
 
 The résumé PDF is generated from `scripts/build-resume.py` using ReportLab. The social sharing image is generated from `public/og-image.svg` with `npm run build:og`.
 
 ## Contact
 
-- [Website](https://collinburleigh.com)
-- [LinkedIn](https://www.linkedin.com/in/burleighcollin)
-- [GitHub](https://github.com/CBurl1)
+- [Website](https://www.collinburleigh.com)
+- [LinkedIn](https://www.linkedin.com/in/burleighcollin/)
+- [Email](mailto:collin.s.burleigh@gmail.com)
