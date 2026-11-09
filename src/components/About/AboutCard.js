@@ -5,7 +5,7 @@ function AboutCard() {
     <div className="about-card">
       <p>
         I'm <span className="purple">Collin Burleigh</span>, a software
-        developer focused on <span className="purple">full-stack applications</span>{" "}
+        engineer focused on <span className="purple">Python backend and full-stack applications</span>{" "}
         for SaaS and ecommerce workflows.
       </p>
       <p>
@@ -17,12 +17,11 @@ function AboutCard() {
         and AWS</span>.
       </p>
       <p>
-        Alongside my freelance work, I'm a{" "}
-        <span className="purple">Technical Systems Engineer</span> for a Magento ecommerce
-        business processing <span className="purple">75+ daily orders</span>.
-        I built M2 InstaCount around its inventory and receiving workflows,
-        and I continue to work with the operational problems the software is
-        meant to solve.
+        I joined <span className="purple">Historia Emporium</span> in order
+        fulfillment in 2022, then moved into software development there after
+        completing Flatiron School in 2023. I built M2 InstaCount for its
+        inventory and receiving workflows and continue to maintain and extend
+        it for the business.
       </p>
       <p>
         Supporting users has made me a more practical developer: I investigate
