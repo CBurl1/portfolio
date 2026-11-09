@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FiArrowUpRight } from "react-icons/fi";
 
 const views = [
   { id: "python", label: "Python", lines: [
@@ -27,16 +26,14 @@ function HeroVisual() {
   return (
     <div className="hero-visual">
       <div className="hero-visual__header">
-        <div><span className="section-eyebrow">SELECTED BUILDS / 01–05</span><h2>Built &amp; shipped<span className="hero-visual__period">.</span></h2></div>
-        <span className="hero-visual__status"><span /> Five projects</span>
+        <h2>Built and shipped</h2>
       </div>
       <div className="hero-visual__tabs" role="group" aria-label="Explore my work by technology">
         {views.map((view) => <button type="button" className={`hv-chip${view.id === activeId ? " hv-chip--active" : ""}`} aria-pressed={view.id === activeId} onClick={() => setActiveId(view.id)} key={view.id}>{view.label}</button>)}
       </div>
       <div className="hero-visual__body" aria-live="polite" aria-atomic="true" key={activeId}>
-        {activeView.lines.map((line, i) => <div className="hv-entry" key={line.name}><span className="hv-entry__number">0{i + 1}</span><div className="hv-entry__copy"><strong>{line.name}</strong><span>{line.detail}</span></div><FiArrowUpRight aria-hidden="true" /></div>)}
+        {activeView.lines.map((line) => <div className="hv-entry" key={line.name}><div className="hv-entry__copy"><strong>{line.name}</strong><span>{line.detail}</span></div></div>)}
       </div>
-      <p className="hero-visual__footnote">Select a technology to see where I used it.</p>
     </div>
   );
 }

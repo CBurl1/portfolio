@@ -13,16 +13,13 @@ function About() {
     <Container fluid className="about-section">
       <Container>
         <PageHeader
-          eyebrow="About · Collin Burleigh"
           title="Software engineer"
-          accent="building across the stack"
+          accent="with a Python focus"
           subtitle="I turn operational problems into working applications, then improve them through direct feedback from the people who use them."
         />
 
         <section className="about-block">
-          <div style={{ textAlign: "center" }}>
-            <span className="section-eyebrow">01 · Bio</span>
-          </div>
+          <h2 className="project-heading">About me</h2>
           <Row style={{ justifyContent: "center" }}>
             <Col lg={9} md={11} sm={12}>
               <Aboutcard />
@@ -31,12 +28,7 @@ function About() {
         </section>
 
         <section className="about-block">
-          <div style={{ textAlign: "center" }}>
-            <span className="section-eyebrow">02 · Experience</span>
-          </div>
-          <h2 className="project-heading" style={{ textAlign: "center" }}>
-            Where I've <strong className="purple">worked</strong>
-          </h2>
+          <h2 className="project-heading">Experience</h2>
           <Row style={{ justifyContent: "center" }}>
             <Col lg={10} md={11} sm={12}>
               <ExperienceTimeline />
@@ -45,9 +37,7 @@ function About() {
         </section>
 
         <section className="about-block skillset-section">
-          <div style={{ textAlign: "center" }}>
-            <span className="section-eyebrow">03 · Skillset</span>
-          </div>
+          <h2 className="project-heading">Skills</h2>
           <div className="skillset-grid">
             <div className="skill-panel">
               <h2 className="project-heading">Core <strong className="purple">technologies</strong></h2>
@@ -63,20 +53,12 @@ function About() {
         </section>
 
         <section className="about-block">
-          <div style={{ textAlign: "center" }}>
-            <span className="section-eyebrow">04 · Outside of work</span>
-          </div>
-          <h2 className="project-heading">A little more <strong className="purple">about me</strong></h2>
+          <h2 className="project-heading">Outside of work</h2>
           <OutsideWork />
         </section>
 
         <section className="about-block">
-          <div style={{ textAlign: "center" }}>
-            <span className="section-eyebrow">05 · Activity</span>
-          </div>
-          <h2 className="project-heading" style={{ textAlign: "center" }}>
-            My <strong className="purple">commits</strong>
-          </h2>
+          <h2 className="project-heading">GitHub activity</h2>
           <div className="github-frame">
             <Github />
           </div>

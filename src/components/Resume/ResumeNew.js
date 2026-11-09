@@ -10,14 +10,6 @@ import pdf from "../../Assets/Collin_Burleigh_Software_Engineer_Resume.pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-const highlights = [
-  "Software Engineer",
-  "Python · FastAPI · Flask",
-  "Next.js · React · TypeScript",
-  "PostgreSQL · Supabase",
-  "Magento 2 API · Veeqo API",
-];
-
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
 
@@ -34,19 +26,9 @@ function ResumeNew() {
     <Container fluid className="resume-section">
       <Container>
         <PageHeader
-          eyebrow="Résumé"
-          title="My"
-          accent="résumé"
-          subtitle="A one-page overview of the applications I've built, the technologies I've used, and the roles I've held."
+          title="Résumé"
+          subtitle="A one-page overview of my software work and experience."
         />
-
-        <div className="resume-highlights">
-          {highlights.map((h) => (
-            <span className="resume-highlight" key={h}>
-              {h}
-            </span>
-          ))}
-        </div>
 
         <Row
           className="resume-actions"

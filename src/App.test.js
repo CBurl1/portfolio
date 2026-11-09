@@ -18,10 +18,10 @@ test("presents software engineering work and navigates to projects", () => {
 
   fireEvent.click(screen.getByRole("link", { name: /Explore Projects/i }));
   expect(document.title).toBe("Projects | Collin Burleigh");
-  expect(screen.getByRole("heading", { name: /Selected software projects/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Selected projects/i })).toBeInTheDocument();
   expect(screen.getAllByText("AutoSortPro").length).toBeGreaterThan(0);
   expect(screen.getAllByText("M2 InstaCount").length).toBeGreaterThan(0);
-  expect(screen.getByText("12.5K+")).toBeInTheDocument();
+  expect(screen.getByText(/132 active users organized 12.5K\+ files/i)).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /Results and methodology/i })).toHaveAttribute("href", "https://m2instacount.com/magento-inventory-case-study/");
   expect(screen.getAllByText("OpenHome").length).toBeGreaterThan(0);
   expect(screen.getAllByText("Sentinel Insulation").length).toBeGreaterThan(0);
