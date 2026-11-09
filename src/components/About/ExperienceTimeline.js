@@ -2,7 +2,7 @@ import React from "react";
 
 const experiences = [
   {
-    role: "Freelance Software Developer",
+    role: "Independent Software Developer",
     org: "Remote",
     period: "Jun 2023 – Present",
     stack: ["Python", "Flask", "FastAPI", "React", "PostgreSQL"],
@@ -11,14 +11,16 @@ const experiences = [
       "Integrated Auth0, Stripe, OpenAI, and AWS into product workflows for authentication, payments, file processing, and AI features.",
       "AutoSortPro reached 132 active users who organized 12.5K+ files; shipped fixes based on reported issues.",
       "Investigated bugs using API responses, logs, and database checks; documented solutions and workflows.",
+      "Continue to maintain and add features to M2 InstaCount for Historia Emporium, alongside SEO and Google Search Console work.",
     ],
   },
   {
-    role: "Technical Systems Engineer · Ecommerce Operations",
-    org: "Magento ecommerce business",
-    period: "2022 – Present",
+    role: "Software Developer · Ecommerce Operations",
+    org: "Historia Emporium",
+    period: "2023 – Aug 2026",
     stack: ["Magento 2", "Python", "Flask", "React", "PostgreSQL"],
     bullets: [
+      "Joined Historia Emporium in 2022 to pick, ship, and receive orders; moved into software development after completing Flatiron School in 2023.",
       "Built M2 InstaCount, a Python, Flask, React, and PostgreSQL tool for barcode lookup, receiving, and Veeqo batch picking.",
       "Designed around barcode workflows, inventory accuracy, and the needs of a business processing 75+ daily orders.",
       "Investigated SKU mismatches and inventory discrepancies in day-to-day operations.",

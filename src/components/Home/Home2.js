@@ -44,7 +44,7 @@ function Home2() {
             <div className="stats-row">
               <div className="stat-card">
                 <div className="stat-value">132</div>
-                <div className="stat-label">Active AutoSortPro users</div>
+                <div className="stat-label">AutoSortPro users during operation</div>
               </div>
               <div className="stat-card">
                 <div className="stat-value">42 → 22h</div>
