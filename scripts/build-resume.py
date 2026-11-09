@@ -87,13 +87,20 @@ def section(title):
             ]
         )
     )
-    return [Spacer(1, 15), line, Spacer(1, 8)]
+    return [Spacer(1, 6), line, Spacer(1, 4)]
 
 
 def entry(title, detail, bullets):
     rows = [Paragraph(title, ITEM), Paragraph(detail, DETAIL)]
     rows += [Paragraph("- " + bullet, SMALL) for bullet in bullets]
-    rows.append(Spacer(1, 11))
+    rows.append(Spacer(1, 7))
+    return KeepTogether(rows)
+
+
+def freelance_project(name, detail, bullets):
+    rows = [Paragraph(f"<b>{name}</b> | {detail}", DETAIL)]
+    rows += [Paragraph("- " + bullet, SMALL) for bullet in bullets]
+    rows.append(Spacer(1, 4))
     return KeepTogether(rows)
 
 
@@ -131,7 +138,7 @@ def main(output=OUTPUT):
 
     story = [
         Paragraph("Collin Burleigh", NAME),
-        Paragraph("SOFTWARE ENGINEER  |  PYTHON BACKEND &amp; FULL-STACK", HEADLINE),
+        Paragraph("SOFTWARE ENGINEER  |  PYTHON BACKEND", HEADLINE),
         Spacer(1, 3),
         Paragraph(
             "New Hampshire, USA  |  603-617-9989  |  "
@@ -142,74 +149,84 @@ def main(output=OUTPUT):
             CONTACT,
         ),
     ]
-    story += section("Profile")
-    story.append(
-        Paragraph(
-            "Software engineer focused on Python backend development for file-management and "
-            "ecommerce applications. Built AutoSortPro with FastAPI and M2 InstaCount with "
-            "Flask, using PostgreSQL and React across both. Improves products after release "
-            "through debugging and user feedback.",
-            BODY,
-        )
-    )
     story += section("Technical skills")
     skills = [
-        ("Languages", "Python, JavaScript, SQL"),
-        ("Backend &amp; data", "FastAPI, Flask, PostgreSQL, SQLite, REST APIs, pytest"),
-        ("Frontend &amp; desktop", "React, Electron, HTML/CSS, Tailwind, Jest"),
-        ("Integrations &amp; tools", "Magento 2 API, Veeqo API, Auth0, Stripe, OpenAI, AWS, Git, Postman, Jira"),
+        ("Languages", "Python, TypeScript, JavaScript, SQL"),
+        ("Backend &amp; data", "FastAPI, Flask, PostgreSQL, Supabase, REST APIs, pytest"),
+        ("Frontend &amp; desktop", "Next.js, React, Electron, Tailwind CSS, HTML/CSS"),
+        ("Cloud &amp; integrations", "AWS, Vercel, Magento 2 API, Veeqo API, Auth0, Stripe, OpenAI API, Git"),
     ]
-    table = Table(
-        [[Paragraph(label, SMALL), Paragraph(value, SMALL)] for label, value in skills],
-        colWidths=[1.55 * inch, 5.8 * inch],
-    )
-    table.setStyle(
-        TableStyle(
+    story.extend(Paragraph(f"<b>{label}:</b> {value}", SMALL) for label, value in skills)
+    story += section("Engineering experience")
+    story.append(Paragraph("Independent Software Developer  |  Jun 2023 - Present", ITEM))
+    story.append(Spacer(1, 3))
+    story.append(
+        freelance_project(
+            "<link href='https://autosortpro.com/#impact'>AutoSortPro (2024 - 2026)</link>",
+            "Python, FastAPI, Electron, React, PostgreSQL",
             [
-                ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 0),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 5),
-                ("TOPPADDING", (0, 0), (-1, -1), 2),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
-            ]
+                "Built FastAPI and PostgreSQL-backed file workflows with validation, OCR, searchable metadata, and export; integrated Auth0, Stripe, OpenAI, and AWS.",
+                "Investigated user issues through logs, API responses, and database checks. During its operation, AutoSortPro served 132 active users who organized 12.5K+ files.",
+            ],
         )
     )
-    story.append(table)
-    story += section("Engineering experience")
     story.append(
-        entry(
-            "Freelance Software Developer  |  Jun 2023 - Present",
-            "AutoSortPro | Python, FastAPI, Electron, React, PostgreSQL",
+        freelance_project(
+            "<link href='https://m2instacount.com/'>M2 InstaCount</link>",
+            "Python, Flask, React, PostgreSQL | Product development and SEO",
             [
-                "Built FastAPI and PostgreSQL-backed workflows that process images and documents into editable titles, summaries, tags, and searchable metadata.",
-                "Implemented file validation, batch processing, OCR, and export of original files with metadata.",
-                "Integrated Auth0, Stripe, OpenAI, and AWS into account, billing, and file-processing workflows.",
-                "Investigated user-reported issues using logs, API responses, and database checks; shipped fixes. AutoSortPro reached 132 active users and organized 12.5K+ files.",
+                "Maintain and extend M2 InstaCount for Historia Emporium; manage Google Search Console.",
+            ],
+        )
+    )
+    story.append(
+        freelance_project(
+            "<link href='https://sentinelinsulation.com'>Sentinel Insulation</link>",
+            "Next.js, React, TypeScript, Tailwind, Supabase | WordPress",
+            [
+                "Built a custom quote tool and expanded it into a mobile-friendly ERP on Vercel with Supabase PostgreSQL, Auth, and Storage.",
+                "Enforced assigned-job and office-only financial access with Supabase Row Level Security (RLS) and server-side checks; direct links cannot bypass document permissions.",
+                "Added shared scheduling, installer job updates/photos and material usage/returns, three-supplier price comparison and PDF orders, plus invoices, payments, commissions, and estimated-vs-actual profit calculations.",
+                "Rebuilt the WordPress site and continue to manage its SEO.",
+            ],
+        )
+    )
+    story.append(
+        freelance_project(
+            "<link href='https://spencerburleigh.com'>Spencer Burleigh</link>",
+            "Jekyll, JavaScript | One-year engagement",
+            [
+                "Redesigned the Jekyll frontend, fixed image and path bugs, and built an S3-backed photo feed with a bucket policy.",
             ],
         )
     )
     story.append(
         entry(
-            "Technical Systems Engineer, Ecommerce Operations  |  2022 - Present",
-            "M2 InstaCount | Python, Flask, React, PostgreSQL, Magento 2 and Veeqo APIs",
+            "Software Developer &amp; Ecommerce Operations  |  Historia Emporium  |  2023 - Aug 2026",
+            "Python, Flask, React, PostgreSQL | Earlier order fulfillment, 2022 - 2023",
             [
-                "Built Flask and PostgreSQL-backed barcode lookup, discrepancy review, receiving with CSV export, and Veeqo-linked mobile batch picking.",
-                "A roughly 4,500-SKU year-end count at one store took 22 hours with the new workflow, down from 42 hours with the prior process.",
-                "Supported Magento inventory and catalog workflows for a business processing 75+ daily orders; investigated SKU and quantity discrepancies.",
+                "Moved from order fulfillment into software development after Flatiron School in 2023; built M2 InstaCount for barcode counts, receiving, and discrepancy review. One 4,500-SKU year-end count took 22 hours, down from 42.",
+                "Built browser-based picking for an Android scanner phone with Magento and Veeqo APIs; four timed picks averaged 22% less time than the prior Veeqo workflow.",
+                "Diagnosed thousands of missing Veeqo images as stale Magento cache links and removed broken references with the Veeqo API.",
+                "Built Python and Beautiful Soup scrapers for brand and consignment images, plus an eBay sold-listing price script matching name, brand, GTIN, and MPN.",
+                "Contributed to a listing pipeline using OpenCV for cropping and color correction and OpenAI API to prefill item data.",
+                "Trained a teammate in Cursor and secure API key handling; advised on project scope and system design.",
             ],
         )
     )
     story.append(
         entry(
             "Application Developer, Contract  |  OpenHome  |  Jan 2024 - Apr 2024",
-            "Python | Grant-funded prototype",
+            "Python, OpenAI API | Voice OS prototype",
             [
-                "Developed a Python application for an AI-powered smart-home OS prototype presented to 100+ potential investors.",
+                "Built a therapist-style conversational app that summarized stored JSON chats for longer-term context.",
             ],
         )
     )
     story += section("Education")
-    story.append(Paragraph("<b>Flatiron School</b>  |  Software Engineering, 2023", BODY))
+    story.append(Paragraph("<b>Flatiron School</b>  |  Software Engineering Bootcamp, 2023", BODY))
+    story += section("Additional experience")
+    story.append(Paragraph("<b>US Foods</b>  |  Order Selector  |  Aug 2026 - Present", SMALL))
     doc.build(story)
     print(output)
 
