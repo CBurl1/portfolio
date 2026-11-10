@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import PageHeader from "../PageHeader";
 
@@ -13,22 +13,8 @@ function Projects() {
           subtitle="Applications and client work built around practical problems."
         />
 
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card" style={{ display: "flex", alignItems: "stretch" }}>
-            <ProjectCard
-              visualKind="field"
-              visualLabel="Sentinel Insulation"
-              visualSubtitle="Quotes · scheduling · field operations"
-              category="Client platform and website"
-              title="Sentinel Insulation"
-              description="Built a custom quote tool and expanded it into a mobile-friendly ERP for scheduling, installer work tickets, material tracking, supplier comparison, PDF orders, invoices, payments, and job costs. Supabase Row Level Security and server checks restrict installers to assigned jobs and keep financials with office staff. Also rebuilt the WordPress site and manage its SEO."
-              tags={["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Vercel", "WordPress"]}
-              demoLink="https://sentinelinsulation.com/"
-              buttonText="Visit website"
-            />
-          </Col>
-
-          <Col md={4} className="project-card" style={{ display: "flex", alignItems: "stretch" }}>
+        <div className="projects-grid">
+          <div className="project-card project-card--feature">
             <ProjectCard
               visualKind="inventory"
               visualLabel="M2 InstaCount"
@@ -43,13 +29,23 @@ function Projects() {
               evidenceText="Results and methodology"
               videoDemo="https://www.youtube.com/watch?v=m02yoiAsPDY"
             />
-          </Col>
+          </div>
 
-          <Col
-            md={4}
-            className="project-card"
-            style={{ display: "flex", alignItems: "stretch" }}
-          >
+          <div className="project-card">
+            <ProjectCard
+              visualKind="field"
+              visualLabel="Sentinel Insulation"
+              visualSubtitle="Quotes · scheduling · field operations"
+              category="Client platform and website"
+              title="Sentinel Insulation"
+              description="Built a custom quote tool and expanded it into a mobile-friendly ERP for scheduling, installer work tickets, material tracking, supplier comparison, PDF orders, invoices, payments, and job costs. Supabase Row Level Security and server checks restrict installers to assigned jobs and keep financials with office staff. Also rebuilt the WordPress site and manage its SEO."
+              tags={["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Vercel", "WordPress"]}
+              demoLink="https://sentinelinsulation.com/"
+              buttonText="Visit website"
+            />
+          </div>
+
+          <div className="project-card">
             <ProjectCard
               visualKind="files"
               visualLabel="AutoSortPro"
@@ -62,9 +58,9 @@ function Projects() {
               buttonText="View case study"
               videoDemo="https://www.youtube.com/watch?v=VLEiTljMmFk"
             />
-          </Col>
+          </div>
 
-          <Col md={4} className="project-card" style={{ display: "flex", alignItems: "stretch" }}>
+          <div className="project-card">
             <ProjectCard
               visualKind="photography"
               visualLabel="Spencer Burleigh"
@@ -76,16 +72,12 @@ function Projects() {
               demoLink="https://spencerburleigh.com/"
               buttonText="Visit website"
             />
-          </Col>
+          </div>
 
-          <Col
-            md={4}
-            className="project-card"
-            style={{ display: "flex", alignItems: "stretch" }}
-          >
+          <div className="project-card">
             <ProjectCard
-              visualLabel="OpenHome"
               visualKind="home"
+              visualLabel="OpenHome"
               visualSubtitle="Python · voice OS prototype"
               category="Python prototype"
               title="OpenHome"
@@ -93,8 +85,8 @@ function Projects() {
               tags={["Python", "OpenAI API", "Voice", "Prototype"]}
               videoDemo="https://www.loom.com/share/a29cbce183324c6fa0dc31b8ea0389e8"
             />
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Container>
     </Container>
   );
