@@ -1,43 +1,119 @@
 import React, { useState } from "react";
-import { FiCheck, FiCode } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import {
+  FiArrowRight, FiBarChart2, FiCalendar, FiCheckCircle, FiClipboard,
+  FiFileText, FiFolder, FiPackage, FiSearch, FiSmartphone, FiTool,
+} from "react-icons/fi";
 
-const views = [
-  { id: "python", label: "Python", lines: [
-    { name: "AutoSortPro", detail: "FastAPI · file processing · AI metadata" },
-    { name: "M2 InstaCount", detail: "Flask · Magento 2 and Veeqo APIs" },
-    { name: "OpenHome", detail: "Python · OpenAI API voice app" },
-  ] },
-  { id: "react", label: "React", lines: [
-    { name: "Sentinel Insulation", detail: "Next.js · installer and office workflows" },
-    { name: "AutoSortPro", detail: "Electron desktop interface" },
-    { name: "M2 InstaCount", detail: "Browser-based stockroom workflows" },
-  ] },
-  { id: "integrations", label: "Integrations", lines: [
-    { name: "M2 InstaCount", detail: "Magento 2 API · Veeqo API" },
-    { name: "Sentinel Insulation", detail: "Supabase · Vercel" },
-    { name: "Spencer Burleigh", detail: "AWS S3 · Jekyll" },
-    { name: "AutoSortPro", detail: "Auth0 · Stripe · OpenAI · AWS" },
-  ] },
+const projects = [
+  {
+    id: "inventory",
+    label: "M2 InstaCount",
+    shortLabel: "M2",
+    icon: FiPackage,
+    title: "Inventory, from scan to review",
+    description: "Barcode counts, receiving, and picking built for the stockroom workflow.",
+    stack: "Python · Flask · Magento 2 and Veeqo APIs",
+    steps: [
+      { label: "Scan items", icon: FiPackage },
+      { label: "Reconcile", icon: FiBarChart2 },
+      { label: "Review counts", icon: FiCheckCircle },
+    ],
+    result: "42 → 22 hours",
+    resultContext: "One roughly 4,500-SKU year-end count",
+  },
+  {
+    id: "files",
+    label: "AutoSortPro",
+    shortLabel: "AutoSortPro",
+    icon: FiFolder,
+    title: "Files, made easier to find",
+    description: "A file organizer with OCR, editable metadata, search, and export.",
+    stack: "Python · FastAPI · Electron · PostgreSQL",
+    steps: [
+      { label: "Add files", icon: FiFileText },
+      { label: "Process", icon: FiTool },
+      { label: "Find & export", icon: FiSearch },
+    ],
+    result: "12.5K+ files",
+    resultContext: "Organized by 132 active users during operation",
+  },
+  {
+    id: "field",
+    label: "Sentinel ERP",
+    shortLabel: "Sentinel",
+    icon: FiClipboard,
+    title: "From quote to the job site",
+    description: "Connected scheduling, installer work, materials, and office tracking.",
+    stack: "Next.js · React · Supabase PostgreSQL",
+    steps: [
+      { label: "Build quote", icon: FiFileText },
+      { label: "Schedule", icon: FiCalendar },
+      { label: "Run the job", icon: FiSmartphone },
+    ],
+    result: "Field to office",
+    resultContext: "Assigned jobs on mobile with office-only financial access",
+  },
 ];
 
 function HeroVisual() {
-  const [activeId, setActiveId] = useState("python");
-  const activeView = views.find((view) => view.id === activeId);
+  const [activeId, setActiveId] = useState("inventory");
+  const activeProject = projects.find((project) => project.id === activeId);
+  const ProjectIcon = activeProject.icon;
 
   return (
-    <div className="hero-visual">
+    <div className={`hero-visual hero-visual--${activeId}`}>
       <div className="hero-visual__header">
-        <div className="hero-visual__mark" aria-hidden="true"><FiCode /></div>
         <div>
           <h2>Built and shipped</h2>
-          <p>Explore the work behind five projects</p>
+          <p>Explore how the software supports real work.</p>
         </div>
+        <span className="hero-visual__header-icon" aria-hidden="true"><ProjectIcon /></span>
       </div>
-      <div className="hero-visual__tabs" role="group" aria-label="Explore my work by technology">
-        {views.map((view) => <button type="button" className={`hv-chip${view.id === activeId ? " hv-chip--active" : ""}`} aria-pressed={view.id === activeId} onClick={() => setActiveId(view.id)} key={view.id}>{view.label}</button>)}
+
+      <div className="hero-visual__tabs" role="group" aria-label="Explore a project workflow">
+        {projects.map((project) => (
+          <button
+            key={project.id}
+            type="button"
+            className={`hv-chip${project.id === activeId ? " hv-chip--active" : ""}`}
+            aria-label={project.label}
+            aria-pressed={project.id === activeId}
+            onClick={() => setActiveId(project.id)}
+          >
+            <span className="hv-chip__full">{project.label}</span>
+            <span className="hv-chip__short" aria-hidden="true">{project.shortLabel}</span>
+          </button>
+        ))}
       </div>
-      <div className="hero-visual__body" aria-live="polite" aria-atomic="true" key={activeId}>
-        {activeView.lines.map((line) => <div className="hv-entry" key={line.name}><div className="hv-entry__copy"><strong>{line.name}</strong><span>{line.detail}</span></div><FiCheck aria-hidden="true" /></div>)}
+
+      <div className="hero-visual__content" aria-live="polite" key={activeId}>
+        <div className="hero-visual__intro">
+          <h3>{activeProject.title}</h3>
+          <p>{activeProject.description}</p>
+        </div>
+        <div className="hero-visual__flow" aria-label={`${activeProject.label} workflow`}>
+          {activeProject.steps.map((step, index) => {
+            const StepIcon = step.icon;
+            return (
+              <React.Fragment key={step.label}>
+                {index > 0 && <span className="hero-visual__connector" aria-hidden="true"><FiArrowRight /></span>}
+                <div className="hero-visual__step">
+                  <StepIcon aria-hidden="true" />
+                  <span>{step.label}</span>
+                </div>
+              </React.Fragment>
+            );
+          })}
+        </div>
+        <div className="hero-visual__result">
+          <strong>{activeProject.result}</strong>
+          <span>{activeProject.resultContext}</span>
+        </div>
+        <div className="hero-visual__footer">
+          <span>{activeProject.stack}</span>
+          <Link to="/project" aria-label="Explore all projects">All projects <FiArrowRight aria-hidden="true" /></Link>
+        </div>
       </div>
     </div>
   );
