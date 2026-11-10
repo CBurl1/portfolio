@@ -3,11 +3,22 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsPlayCircle } from "react-icons/bs";
+import { FiCamera, FiFolder, FiHome, FiPackage, FiTool } from "react-icons/fi";
+
+const visualIcons = {
+  files: FiFolder,
+  inventory: FiPackage,
+  home: FiHome,
+  field: FiTool,
+  photography: FiCamera,
+};
 
 function ProjectCards(props) {
+  const VisualIcon = visualIcons[props.visualKind] || FiHome;
   return (
     <Card className="project-card-view" style={{ width: "100%" }}>
       <div className={`project-card-visual project-card-visual--${props.visualKind || "home"}`}>
+        <div className="project-card-visual__icon" aria-hidden="true"><VisualIcon /></div>
         <div>
           <h2 className="project-card-visual__title">{props.visualLabel || props.title}</h2>
           <small>{props.visualSubtitle}</small>

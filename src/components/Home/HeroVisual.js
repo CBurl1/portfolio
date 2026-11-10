@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FiCheck, FiCode } from "react-icons/fi";
 
 const views = [
   { id: "python", label: "Python", lines: [
@@ -26,13 +27,17 @@ function HeroVisual() {
   return (
     <div className="hero-visual">
       <div className="hero-visual__header">
-        <h2>Built and shipped</h2>
+        <div className="hero-visual__mark" aria-hidden="true"><FiCode /></div>
+        <div>
+          <h2>Built and shipped</h2>
+          <p>Explore the work behind five projects</p>
+        </div>
       </div>
       <div className="hero-visual__tabs" role="group" aria-label="Explore my work by technology">
         {views.map((view) => <button type="button" className={`hv-chip${view.id === activeId ? " hv-chip--active" : ""}`} aria-pressed={view.id === activeId} onClick={() => setActiveId(view.id)} key={view.id}>{view.label}</button>)}
       </div>
       <div className="hero-visual__body" aria-live="polite" aria-atomic="true" key={activeId}>
-        {activeView.lines.map((line) => <div className="hv-entry" key={line.name}><div className="hv-entry__copy"><strong>{line.name}</strong><span>{line.detail}</span></div></div>)}
+        {activeView.lines.map((line) => <div className="hv-entry" key={line.name}><div className="hv-entry__copy"><strong>{line.name}</strong><span>{line.detail}</span></div><FiCheck aria-hidden="true" /></div>)}
       </div>
     </div>
   );
