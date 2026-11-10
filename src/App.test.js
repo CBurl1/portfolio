@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
 import HeroVisual from "./components/Home/HeroVisual";
+import { MemoryRouter } from "react-router-dom";
 
 jest.mock("./components/Particle", () => function MockParticle() {
   return null;
@@ -29,14 +30,16 @@ test("presents software engineering work and navigates to projects", () => {
   expect(screen.getByText(/Supabase Row Level Security and server checks/i)).toBeInTheDocument();
 });
 
-test("selected builds switches between Python and integration details", () => {
-  render(<HeroVisual />);
+test("built and shipped shows the selected project's real workflow", () => {
+  render(<MemoryRouter><HeroVisual /></MemoryRouter>);
 
-  expect(screen.getByRole("button", { name: "Python" })).toHaveAttribute("aria-pressed", "true");
-  expect(screen.getByText("FastAPI · file processing · AI metadata")).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: "M2 InstaCount" })).toHaveAttribute("aria-pressed", "true");
+  expect(screen.getByText("42 → 22 hours")).toBeInTheDocument();
+  expect(screen.getByText("One roughly 4,500-SKU year-end count")).toBeInTheDocument();
 
-  fireEvent.click(screen.getByRole("button", { name: "Integrations" }));
-  expect(screen.getByRole("button", { name: "Integrations" })).toHaveAttribute("aria-pressed", "true");
-  expect(screen.getByText("Magento 2 API · Veeqo API")).toBeInTheDocument();
-  expect(screen.queryByText("FastAPI · file processing · AI metadata")).not.toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: "AutoSortPro" }));
+  expect(screen.getByRole("button", { name: "AutoSortPro" })).toHaveAttribute("aria-pressed", "true");
+  expect(screen.getByText("Find & export")).toBeInTheDocument();
+  expect(screen.getByText("12.5K+ files")).toBeInTheDocument();
+  expect(screen.queryByText("42 → 22 hours")).not.toBeInTheDocument();
 });
