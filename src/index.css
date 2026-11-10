@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
 :root{color-scheme:light;--canvas:#f4f3ef;--paper:#fff;--ink:#1d2b32;--muted:#53636b;--line:#d8ddda;--blue:#205478;--blue-dark:#153d5b;--soft-blue:#e9f0f3;--green:#207461;--shadow:0 14px 36px rgba(24,40,46,.08)}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}

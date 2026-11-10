@@ -32,7 +32,7 @@ function ProjectArt({ kind }) {
 function ProjectCards(props) {
   const VisualIcon = visualIcons[props.visualKind] || FiHome;
   return (
-    <Card className="project-card-view" style={{ width: "100%" }}>
+    <Card className="project-card-view">
       <div className={`project-card-visual project-card-visual--${props.visualKind || "home"}`}>
         <div className="project-card-visual__icon" aria-hidden="true"><VisualIcon /></div>
         <ProjectArt kind={props.visualKind} />
@@ -42,24 +42,9 @@ function ProjectCards(props) {
         </div>
       </div>
 
-      <Card.Body
-        style={{
-          padding: "1.4rem",
-          display: "flex",
-          flexDirection: "column",
-          flex: "1",
-        }}
-      >
+      <Card.Body className="project-card-body">
         <div className="project-card-category">{props.category}</div>
-        <Card.Text
-          style={{
-            textAlign: "left",
-            fontSize: "0.92rem",
-            lineHeight: "1.55",
-            marginBottom: "1rem",
-            flex: "1",
-          }}
-        >
+        <Card.Text>
           {props.description}
         </Card.Text>
 

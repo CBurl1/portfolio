@@ -18,13 +18,9 @@ function About() {
           subtitle="I turn operational problems into working applications, then improve them through direct feedback from the people who use them."
         />
 
-        <section className="about-block">
+        <section className="about-block about-block--intro">
           <h2 className="project-heading">About me</h2>
-          <Row style={{ justifyContent: "center" }}>
-            <Col lg={9} md={11} sm={12}>
-              <Aboutcard />
-            </Col>
-          </Row>
+          <Aboutcard />
         </section>
 
         <section className="about-block">

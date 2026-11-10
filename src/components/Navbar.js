@@ -35,7 +35,7 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex navbar-logo-text">
+        <Navbar.Brand as={Link} to="/" aria-label="Collin Burleigh, home" className="d-flex navbar-logo-text">
           CB
         </Navbar.Brand>
         <Navbar.Toggle
