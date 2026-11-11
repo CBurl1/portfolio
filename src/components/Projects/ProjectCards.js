@@ -4,7 +4,6 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsPlayCircle } from "react-icons/bs";
 import { FiCamera, FiFolder, FiHome, FiPackage, FiTool } from "react-icons/fi";
-import SentinelGallery from "./SentinelGallery";
 
 const visualIcons = {
   files: FiFolder,
@@ -48,8 +47,6 @@ function ProjectCards(props) {
         <Card.Text>
           {props.description}
         </Card.Text>
-
-        {props.showSentinelGallery && <SentinelGallery />}
 
         {Array.isArray(props.tags) && props.tags.length > 0 && (
           <p className="project-stack">{props.tags.join(" · ")}</p>

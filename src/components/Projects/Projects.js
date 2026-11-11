@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import PageHeader from "../PageHeader";
+import SentinelGallery from "./SentinelGallery";
 
 function Projects() {
   return (
@@ -38,7 +39,6 @@ function Projects() {
               visualSubtitle="Quotes · scheduling · field operations"
               category="Client platform and website"
               title="Sentinel Insulation"
-              showSentinelGallery
               description="Built a custom quote tool and expanded it into a mobile-friendly ERP for scheduling, installer work tickets, material tracking, supplier comparison, PDF orders, invoices, payments, and job costs. Supabase Row Level Security and server checks restrict installers to assigned jobs and keep financials with office staff. Also rebuilt the WordPress site and manage its SEO."
               tags={["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Vercel", "WordPress"]}
               demoLink="https://sentinelinsulation.com/"
@@ -59,6 +59,10 @@ function Projects() {
               buttonText="View case study"
               videoDemo="https://www.youtube.com/watch?v=VLEiTljMmFk"
             />
+          </div>
+
+          <div className="sentinel-gallery-section">
+            <SentinelGallery />
           </div>
 
           <div className="project-card">

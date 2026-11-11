@@ -13,30 +13,34 @@ function SentinelGallery() {
   const image = `/sentinel-quote-demo/${screen.file}`;
 
   return (
-    <div className="sentinel-gallery" aria-label="Sentinel quote builder screenshots">
+    <section className="sentinel-gallery" aria-label="Sentinel quote builder screenshots">
       <div className="sentinel-gallery__intro">
-        <strong>Inside the quote builder</strong>
-        <span>Early demo screens with fictional data. The tool later grew into the field operations app described above.</span>
+        <h2>How Sentinel started</h2>
+        <p>The quote builder was the starting point for Sentinel's field operations app. These early demo screens use fictional customer and pricing data.</p>
       </div>
-      <a className="sentinel-gallery__preview" href={image} target="_blank" rel="noopener noreferrer" aria-label={`Open full ${screen.title} screenshot`}>
-        <img src={image} alt={`${screen.title}: ${screen.detail}`} loading="lazy" />
-        <span>Open full image ↗</span>
-      </a>
-      <div className="sentinel-gallery__controls" aria-label="Choose a screenshot">
-        {screens.map((item, index) => (
-          <button
-            type="button"
-            key={item.file}
-            className={index === active ? "is-active" : ""}
-            onClick={() => setActive(index)}
-            aria-pressed={index === active}
-          >
-            {item.title}
-          </button>
-        ))}
+      <div className="sentinel-gallery__content">
+        <a className="sentinel-gallery__preview" href={image} target="_blank" rel="noopener noreferrer" aria-label={`Open full ${screen.title} screenshot`}>
+          <img src={image} alt={`${screen.title}: ${screen.detail}`} loading="lazy" />
+          <span>Open full image ↗</span>
+        </a>
+        <div className="sentinel-gallery__details">
+          <div className="sentinel-gallery__controls" aria-label="Choose a screenshot">
+            {screens.map((item, index) => (
+              <button
+                type="button"
+                key={item.file}
+                className={index === active ? "is-active" : ""}
+                onClick={() => setActive(index)}
+                aria-pressed={index === active}
+              >
+                {item.title}
+              </button>
+            ))}
+          </div>
+          <p className="sentinel-gallery__caption">{screen.detail}</p>
+        </div>
       </div>
-      <p className="sentinel-gallery__caption">{screen.detail}</p>
-    </div>
+    </section>
   );
 }
 
