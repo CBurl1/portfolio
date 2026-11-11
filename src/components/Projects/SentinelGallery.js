@@ -15,7 +15,7 @@ function SentinelGallery() {
   return (
     <section className="sentinel-gallery" aria-label="Sentinel quote builder screenshots">
       <div className="sentinel-gallery__intro">
-        <h2>How Sentinel started</h2>
+        <h2>From quote to job paperwork</h2>
         <p>The quote builder was the starting point for Sentinel's field operations app. These early demo screens use fictional customer and pricing data.</p>
       </div>
       <div className="sentinel-gallery__content">

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import SentinelQuoteBuilder from "./components/Projects/SentinelQuoteBuilder";
 import ResumeNew from "./components/Resume/ResumeNew";
 import Footer from "./components/Footer";
 import {
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
+          <Route path="/project/sentinel-quote-builder" element={<SentinelQuoteBuilder />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<ResumeNew />} />
           <Route path="*" element={<Navigate to="/" />} />

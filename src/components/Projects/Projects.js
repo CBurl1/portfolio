@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import PageHeader from "../PageHeader";
-import SentinelGallery from "./SentinelGallery";
 
 function Projects() {
   return (
@@ -43,6 +42,8 @@ function Projects() {
               tags={["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Vercel", "WordPress"]}
               demoLink="https://sentinelinsulation.com/"
               buttonText="Visit website"
+              detailLink="/project/sentinel-quote-builder"
+              detailText="Quote builder screenshots"
             />
           </div>
 
@@ -59,10 +60,6 @@ function Projects() {
               buttonText="View case study"
               videoDemo="https://www.youtube.com/watch?v=VLEiTljMmFk"
             />
-          </div>
-
-          <div className="sentinel-gallery-section">
-            <SentinelGallery />
           </div>
 
           <div className="project-card">

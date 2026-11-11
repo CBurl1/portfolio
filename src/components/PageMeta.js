@@ -17,6 +17,11 @@ const pages = {
     description:
       "Explore M2 InstaCount, Sentinel Insulation, AutoSortPro, Spencer Burleigh, and OpenHome projects by Collin Burleigh.",
   },
+  "/project/sentinel-quote-builder": {
+    title: "Sentinel Quote Builder | Collin Burleigh",
+    description:
+      "Explore demo screenshots of the custom quote builder Collin Burleigh built for Sentinel Insulation before it expanded into a field operations app.",
+  },
   "/resume": {
     title: "Résumé | Collin Burleigh",
     description:

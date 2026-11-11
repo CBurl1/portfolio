@@ -129,8 +129,9 @@ p{line-height:1.7}
 .project-actions{display:flex;flex-wrap:wrap;gap:.5rem}
 .project-actions .btn{font-size:.76rem!important;padding:.68rem .76rem!important}
 .project-evidence-link{display:inline-block;font-size:.76rem;font-weight:600;margin-top:.9rem}
-.sentinel-gallery-section{grid-column:1/-1}
-.sentinel-gallery{padding:1.8rem 2rem;background:#eaf0ed;border-radius:10px}
+.sentinel-detail-back{display:inline-block;margin:-1.1rem 0 1.4rem;font-size:.84rem;font-weight:600}
+.sentinel-detail-section .page-header{margin-bottom:2.4rem}
+.sentinel-gallery{padding:0}
 .sentinel-gallery__intro{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:1.3rem}
 .sentinel-gallery__intro h2{font-size:1.45rem;line-height:1.2;margin:0;color:var(--ink)}
 .sentinel-gallery__intro p{max-width:535px;color:var(--muted);font-size:.85rem;line-height:1.55;margin:0}
