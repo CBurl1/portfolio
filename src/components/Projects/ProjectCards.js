@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsPlayCircle } from "react-icons/bs";
 import { FiCamera, FiFolder, FiHome, FiPackage, FiTool } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const visualIcons = {
   files: FiFolder,
@@ -57,6 +58,12 @@ function ProjectCards(props) {
             <Button variant="primary" href={props.demoLink} target="_blank" rel="noopener noreferrer">
               <CgWebsite /> &nbsp;{props.buttonText || "Demo"}
             </Button>
+          )}
+
+          {props.detailLink && (
+            <Link className="btn btn-outline-primary btn-ghost" to={props.detailLink}>
+              {props.detailText || "View project"}
+            </Link>
           )}
 
           {props.videoDemo && (

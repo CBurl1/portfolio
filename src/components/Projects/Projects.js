@@ -42,6 +42,8 @@ function Projects() {
               tags={["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Vercel", "WordPress"]}
               demoLink="https://sentinelinsulation.com/"
               buttonText="Visit website"
+              detailLink="/project/sentinel-quote-builder"
+              detailText="Quote builder screenshots"
             />
           </div>
 

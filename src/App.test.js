@@ -28,6 +28,12 @@ test("presents software engineering work and navigates to projects", () => {
   expect(screen.getAllByText("Sentinel Insulation").length).toBeGreaterThan(0);
   expect(screen.getAllByText("Spencer Burleigh").length).toBeGreaterThan(0);
   expect(screen.getByText(/Supabase Row Level Security and server checks/i)).toBeInTheDocument();
+
+  fireEvent.click(screen.getByRole("link", { name: "Quote builder screenshots" }));
+  expect(screen.getByRole("heading", { name: /Sentinel quote builder/i })).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: "Open full Estimate builder screenshot" })).toHaveAttribute("href", "/sentinel-quote-demo/01-estimate-builder.jpg");
+  fireEvent.click(screen.getByRole("button", { name: "Saved quotes" }));
+  expect(screen.getByRole("link", { name: "Open full Saved quotes screenshot" })).toHaveAttribute("href", "/sentinel-quote-demo/02-quote-history.jpg");
 });
 
 test("built and shipped shows the selected project's real workflow", () => {
