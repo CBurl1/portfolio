@@ -16,7 +16,7 @@ function SentinelGallery() {
     <section className="sentinel-gallery" aria-label="Sentinel quote builder screenshots">
       <div className="sentinel-gallery__intro">
         <h2>From quote to job paperwork</h2>
-        <p>The quote builder was the starting point for Sentinel's field operations app. These early demo screens use fictional customer and pricing data.</p>
+        <p>Browse four screens from the earlier quote-focused version. Customer and pricing details are fictional demo data.</p>
       </div>
       <div className="sentinel-gallery__content">
         <a className="sentinel-gallery__preview" href={image} target="_blank" rel="noopener noreferrer" aria-label={`Open full ${screen.title} screenshot`}>

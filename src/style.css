@@ -131,6 +131,9 @@ p{line-height:1.7}
 .project-evidence-link{display:inline-block;font-size:.76rem;font-weight:600;margin-top:.9rem}
 .sentinel-detail-back{display:inline-block;margin:-1.1rem 0 1.4rem;font-size:.84rem;font-weight:600}
 .sentinel-detail-section .page-header{margin-bottom:2.4rem}
+.sentinel-detail-copy{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4rem;margin:0 0 3.2rem}
+.sentinel-detail-copy h2{font-size:1.2rem;line-height:1.3;color:var(--ink);margin:0 0 .65rem}
+.sentinel-detail-copy p{max-width:510px;color:var(--muted);font-size:.91rem;line-height:1.75;margin:0}
 .sentinel-gallery{padding:0}
 .sentinel-gallery__intro{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:1.3rem}
 .sentinel-gallery__intro h2{font-size:1.45rem;line-height:1.2;margin:0;color:var(--ink)}
@@ -146,7 +149,7 @@ p{line-height:1.7}
 .sentinel-gallery__controls button:hover,.sentinel-gallery__controls button:focus-visible{color:var(--ink)}
 .sentinel-gallery__controls button.is-active{color:var(--ink);border-left-color:var(--blue);background:rgba(255,255,255,.65);font-weight:600}
 .sentinel-gallery__caption{color:var(--muted);font-size:.8rem;line-height:1.5;margin:1rem 0 0}
-@media(max-width:767px){.sentinel-gallery{padding:1.4rem}.sentinel-gallery__intro{display:block}.sentinel-gallery__intro p{margin-top:.45rem}.sentinel-gallery__content{grid-template-columns:1fr;gap:.8rem}.sentinel-gallery__preview{height:260px}.sentinel-gallery__controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:.2rem}.sentinel-gallery__controls button{min-width:0;border-left:0;border-bottom:2px solid transparent;padding:.5rem .4rem;font-size:.75rem}.sentinel-gallery__controls button.is-active{border-left:0;border-bottom-color:var(--blue)}.sentinel-gallery__caption{margin:.35rem 0 0}}
+@media(max-width:767px){.sentinel-detail-copy{grid-template-columns:1fr;gap:1.5rem;margin-bottom:2.5rem}.sentinel-gallery{padding:0}.sentinel-gallery__intro{display:block}.sentinel-gallery__intro p{margin-top:.45rem}.sentinel-gallery__content{grid-template-columns:1fr;gap:.8rem}.sentinel-gallery__preview{height:260px}.sentinel-gallery__controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:.2rem}.sentinel-gallery__controls button{min-width:0;border-left:0;border-bottom:2px solid transparent;padding:.5rem .4rem;font-size:.75rem}.sentinel-gallery__controls button.is-active{border-left:0;border-bottom-color:var(--blue)}.sentinel-gallery__caption{margin:.35rem 0 0}}
 
 /* About */
 .about-block{padding:2.8rem 0 3.1rem}
