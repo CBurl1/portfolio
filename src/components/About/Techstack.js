@@ -1,10 +1,11 @@
 import React from "react";
 import { DiCss3, DiHtml5, DiJavascript1, DiPython, DiReact } from "react-icons/di";
 import { SiFastapi, SiFlask, SiNextdotjs, SiPostgresql, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { FiDatabase } from "react-icons/fi";
 const skills = [
   ["Python", DiPython], ["TypeScript", SiTypescript], ["JavaScript", DiJavascript1],
   ["React", DiReact], ["Next.js", SiNextdotjs], ["Flask", SiFlask],
-  ["FastAPI", SiFastapi], ["PostgreSQL", SiPostgresql],
+  ["FastAPI", SiFastapi], ["PostgreSQL", SiPostgresql], ["SQL", FiDatabase],
   ["Tailwind CSS", SiTailwindcss], ["HTML", DiHtml5], ["CSS", DiCss3],
 ];
 

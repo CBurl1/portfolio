@@ -46,6 +46,9 @@ function About() {
               <Toolstack />
             </div>
           </div>
+          <p className="skill-certification">
+            HackerRank SQL (Intermediate) certification, earned November 2026. <a href="https://www.hackerrank.com/certificates/C0769D498A02" target="_blank" rel="noopener noreferrer">View verified credential ↗</a>
+          </p>
         </section>
 
         <section className="about-block">

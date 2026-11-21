@@ -179,6 +179,8 @@ p{line-height:1.7}
 .skill-item__icon{flex:none;display:grid;place-items:center;width:25px;height:25px;color:var(--blue);font-size:1.15rem}
 .skill-panel:nth-child(2) .skill-item{background:#f3f6f2}
 .skill-panel:nth-child(2) .skill-item__icon{color:var(--green)}
+.skill-certification{margin:1rem 0 0;color:var(--muted);font-size:.83rem;line-height:1.55}
+.skill-certification a{font-weight:600;white-space:nowrap}
 .outside-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.2rem}
 .outside-work-card{min-width:0;padding:1.5rem;background:#eaf0ed;border-radius:9px}
 .outside-work-card--travel{background:#edf1f5}
