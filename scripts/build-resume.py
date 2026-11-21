@@ -87,20 +87,20 @@ def section(title):
             ]
         )
     )
-    return [Spacer(1, 6), line, Spacer(1, 4)]
+    return [Spacer(1, 4), line, Spacer(1, 4)]
 
 
 def entry(title, detail, bullets):
     rows = [Paragraph(title, ITEM), Paragraph(detail, DETAIL)]
     rows += [Paragraph("- " + bullet, SMALL) for bullet in bullets]
-    rows.append(Spacer(1, 7))
+    rows.append(Spacer(1, 6))
     return KeepTogether(rows)
 
 
 def freelance_project(name, detail, bullets):
     rows = [Paragraph(f"<b>{name}</b> | {detail}", DETAIL)]
     rows += [Paragraph("- " + bullet, SMALL) for bullet in bullets]
-    rows.append(Spacer(1, 4))
+    rows.append(Spacer(1, 3))
     return KeepTogether(rows)
 
 
@@ -225,6 +225,14 @@ def main(output=OUTPUT):
     )
     story += section("Education")
     story.append(Paragraph("<b>Flatiron School</b>  |  Software Engineering Bootcamp, 2023", BODY))
+    story.append(
+        Paragraph(
+            "<b>Certifications</b>  |  "
+            "<link href='https://www.hackerrank.com/certificates/C0769D498A02'>HackerRank SQL (Intermediate)</link>, 2026  |  "
+            "Registered Scrum Master (RSM), 2023 (expired 2024)",
+            SMALL,
+        )
+    )
     story += section("Additional experience")
     story.append(Paragraph("<b>US Foods</b>  |  Order Selector  |  Aug 2026 - Present", SMALL))
     doc.build(story)
